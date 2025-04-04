@@ -1,0 +1,92 @@
+.editAppointment-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 12rem auto;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.2);
+    width: 60%;
+}
+.editAppointment-container h1{
+    background: hsl(197, 96%, 45%);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1rem;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.current-appointment-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+    align-items: center;
+}
+
+.editAppointment-inner form{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.editAppointment-inner form select{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 2%, 84%);
+    width: 100%;
+    padding: .8rem;
+    cursor: pointer;
+}
+
+.button-update-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.button-update-container .btnCancel{
+    color: #333;
+    background: #fff;
+    padding: .8rem 1.8rem;
+    border: .1rem solid hsl(0, 3%, 83%);
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.btnCancel:hover{
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+.button-update-container .btnUpdateAppointment{
+    color: #fff;
+    background: hsl(197, 96%, 45%);
+    padding: .9rem 1.8rem;
+    border: .1rem solid hsl(0, 3%, 83%);
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.button-update-container .btnUpdateAppointment:hover{
+    color: #fff;
+    background: hsl(197, 99%, 37%);
+    padding: .9rem 1.8rem;
+    border: .1rem solid hsl(0, 3%, 83%);
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.editAppointment-inner{
+    padding: 2rem 5%;
+}
+
+.appointment-left{
+    flex: 1 1 20rem;
+}
+
+.appointment-right-{
+    flex: 1 1 20rem;
+}

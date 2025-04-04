@@ -1,0 +1,176 @@
+.my-appointments-container .my-appointments-inner{
+    background: hsl(197, 98%, 48%);
+    height: 15rem;
+    padding: 2rem 5%;
+}
+
+.my-appointments-container .my-appointments-inner h1{
+    padding-top: 5rem !important;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.my-appointments-container .my-appointments-inner p{
+    display: flex;
+    align-items: center;
+    color: #fff !important ;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.status-check{
+    color: #fff;
+    background: hsl(120, 98%, 38%);
+    width: 100%;
+    margin-top: -1.4rem;
+    padding: 2rem 5%;
+}
+
+.status-check h2{
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.status-reject{
+    color: #fff;
+    background: red;
+    width: 100%;
+    margin-top: -1.4rem;
+    padding: 2rem 5%;
+}
+
+.status-reject h2{
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.appointment-details{
+    padding: 2rem 5%;
+}
+
+.doc-left img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.doc-details{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.doc-right p{
+    margin-top: -.8rem;
+    color: hsl(0, 1%, 46%);
+}
+
+.button-co{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button-co button{
+    color: hsl(197, 93%, 40%);
+    background: hsl(197, 59%, 88%);
+    padding: .8rem 1.2rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+}
+
+.appointment-details h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+
+.user-appointment-details{
+    border-top: .1rem solid hsl(0, 1%, 78%);
+    margin: 1.5rem 0rem;
+}
+
+.user-appointment-details h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.service-container{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.service-content{
+    margin-top: -1rem;
+}
+
+.service-content p{
+    margin-top: -.8rem;
+}
+
+.btnReschedule{
+    margin-top: 2rem !important;
+    color: #fff;
+    background: hsl(197, 94%, 46%);
+    cursor: pointer;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+}
+
+.btnReschedule:hover{
+    color: #333;
+    background: #fff;
+    border: .1rem solid hsl(197, 89%, 48%);
+}
+
+.check-ins{
+    margin-top: 5rem;
+    border-left: .5rem solid hsl(197, 92%, 46%);
+    padding-left: 2rem;
+    background: hsl(199, 62%, 91%);
+    padding: 1rem;
+}
+
+.service-container:nth-child(6){
+    margin-bottom: 2.5rem;
+}
+
+.app-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0, 0%, 97%);
+    padding: 8rem 0rem;
+    text-align: center;
+}
+
+.app-inner h3{
+    font-size: 2rem;
+    margin: 1rem 0rem;
+}
+
+.btnBook{
+    color: #fff;
+    background: blue;
+    padding: 1.2rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btnBook:hover{
+    background: none;
+    border: .1rem solid blue;
+    color: #333;
+}
+
+.border-bottom-{
+    border-bottom: 1rem solid hsl(0, 3%, 81%);
+    padding-bottom: 5rem;
+}
+
+.check-ins-container{
+    padding: 2rem 5%;
+}

@@ -1,0 +1,56 @@
+.admin-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0rem;
+}
+
+.admin-heading h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 8rem;
+}
+
+.admin-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tending-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-box{
+    background: hsl(198, 73%, 87%);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.admin-box p:nth-child(3){
+    color: red;
+    margin-top: 1rem;
+}
+
+.admin-container{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background: hsl(0, 0%, 97%);
+}
+
+.admin-box:nth-child(2){
+    background: hsl(120, 66%, 90%);
+}
+
+.admin-box:nth-child(3){
+    background: hsl(300, 69%, 89%);
+}

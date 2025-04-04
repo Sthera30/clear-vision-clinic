@@ -1,0 +1,20 @@
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .1rem solid hsl(0, 6%, 84%);
+    margin: 0rem auto;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 3rem;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.search-container input{
+    width: 100% !important;
+    background: none;
+}
+
+.doc-heading{
+    padding: 2rem 2%;
+}

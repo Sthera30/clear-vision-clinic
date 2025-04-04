@@ -1,0 +1,120 @@
+.doc-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.doc-heading h1{
+    font-weight: 300;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.doc-heading h1 span{
+    color: hsl(197, 93%, 45%);
+}
+
+.doc-heading p{
+    max-width: 35rem;
+    text-align: center;
+    line-height: 1.5;
+    color: hsl(0, 1%, 54%);
+    font-size: 1.2rem;
+}
+
+.doc-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 3%;
+}
+
+.doc-container .doc-box{
+    flex: 1 1 20rem !important;
+    overflow: hidden;
+    border: .1rem solid skyblue;
+}
+
+.doc-container .doc-box .content{
+    padding: 1.2rem;
+    height: 25rem;
+}
+
+.doc-container .doc-box .content h1{
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: hsl(197, 96%, 36%);
+}
+
+.doc-container .doc-box .content p:nth-child(2){
+    color: hsl(0, 1%, 57%);
+    font-size: 1.2rem;
+}
+
+.doc-container .doc-box .content p:nth-child(3)
+{
+    color: hsl(0, 1%, 44%);
+    line-height: 1.5;
+}
+
+.doc-container .doc-box .content ul li{
+    line-height: 1.5;
+    color: hsl(0, 1%, 50%);
+}
+
+.doc-container .doc-box img{
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+}
+
+.doc-container .doc-box:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.content .button-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+}
+
+.btnBiography{
+    color: hsl(197, 92%, 43%);
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: .1rem solid hsl(197, 91%, 40%);
+    font-size: 1rem;
+}
+
+.btnBiography:hover{
+    color: #fff;
+    background: hsl(197, 96%, 40%);
+    cursor: pointer;
+}
+
+
+
+.btnSchedule{
+    color: #fff;
+    background: hsl(197, 93%, 42%);
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: .1rem solid hsl(197, 91%, 40%);
+    font-size: 1rem;
+}
+
+.btnSchedule:hover{
+    color: hsl(197, 90%, 44%);
+    background: #fff;
+    cursor: pointer;
+}

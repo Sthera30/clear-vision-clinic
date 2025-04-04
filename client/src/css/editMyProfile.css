@@ -1,0 +1,71 @@
+.edit-my-profile-page-inner .edit-my-profile-inner form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+    margin: 1rem auto;
+    width: 40%;
+    padding: 2rem;
+}
+
+.edit-my-profile-page-inner .edit-my-profile-inner form h1 {
+    margin: 4rem 0rem;
+    font-weight: 300;
+}
+
+.edit-my-profile-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+}
+
+.edit-my-profile-page-container h1 {
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: hsl(197, 89%, 54%);
+    width: 100%;
+    text-align: center;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5rem;
+    color: #fff;
+    font-size: 3rem;
+}
+
+
+.edit-my-profile-page-inner .edit-my-profile-inner form input {
+    border: .1rem solid hsl(0, 5%, 89%);
+    margin: 1.1rem 0rem;
+    padding: .9rem;
+    width: 100%;
+}
+
+.button-container--{
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.btnCancel{
+    color: #333;
+    background: #fff;
+    border: .1rem solid hsl(197, 88%, 49%);
+    padding: .8rem 2rem;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.btnSave{
+    color: #fff;
+    background: hsl(197, 95%, 45%);
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.btnSave:hover{
+    background: hsl(197, 75%, 58%);
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+}

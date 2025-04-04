@@ -1,0 +1,120 @@
+.service-heading{
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-heading h1{
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+
+.service-heading h1 span{
+    color: hsl(197, 89%, 44%);
+}
+
+.service-heading p{
+    max-width: 40rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: hsl(0, 1%, 60%);
+
+}
+
+.service-box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3%;
+}
+
+.service-box {
+    flex: 1 1 25rem;
+    border: .1rem solid hsl(0, 2%, 69%);
+    box-shadow: .5rem 1rem 1.2rem hsla(202, 97%, 45%, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.service-box .content{
+    margin: 1rem 1rem;
+}
+
+.service-box .content h2{
+    color: hsl(197, 91%, 46%);
+    font-weight: 300;
+}
+
+.service-box .content p{
+    color: hsl(0, 1%, 46%);
+    line-height: 1.5;
+}
+
+.service-box .content button{
+    color: #fff;
+    background: hsl(197, 94%, 44%);
+    padding: 1rem 1.2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.service-box .content button:hover{
+    background: #fff;
+    color: #333;
+    border: .1rem solid hsl(197, 92%, 43%);
+}
+
+.service-box img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.service-box img:hover{
+    transform: scale(1.1);
+}
+
+.button-learn{
+    display: flex;
+    align-items: center;
+}
+
+.button-learn a{
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.btnEdit{
+    background: green;
+    color: #fff;
+    border-radius: 3rem;
+    padding: .8rem 1.8rem;
+    cursor: pointer;
+}
+
+
+.btnRemove{
+    background: red !important;
+    color: #fff;
+    border-radius: 3rem;
+    padding: .8rem 1.8rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.btnEdit:hover{
+    background: #fff;
+    border: .1rem solid green;
+    color: #333;
+}
+
+.btnRemove:hover{
+    background: #fff !important;
+    border: .1rem solid red !important;
+    color: #333;
+}

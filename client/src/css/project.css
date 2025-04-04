@@ -1,0 +1,61 @@
+.projects-container{
+    text-align: center;
+    margin: 5rem 0rem;
+}
+
+.projects-container h1{
+    font-size: 3.3rem;
+    font-weight: 300;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.projects-container p{
+    font-size: 1.5rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.project-box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2rem 5%;
+    gap: 1.5rem;
+}
+
+.project-box-container .project-box{
+   flex: 1 1 15rem;
+   cursor: pointer;
+   position: relative;
+}
+
+.project-box .content{
+    background: hsl(0, 10%, 94%);
+    width: 40%;
+    height: 6rem;
+    padding-top: 1rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #333;
+    border-radius: .5rem;
+    box-shadow: 0rem .5rem 1rem hsla(0, 88%, 66%, 0.5);
+    position: absolute;
+    top: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-box .content p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.project-box-container .project-box img{
+    width: 40%;
+    height: 25rem;
+    border-radius: .5rem;
+    object-fit: cover;
+    border: .5rem solid red;
+}

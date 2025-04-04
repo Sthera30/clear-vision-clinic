@@ -1,0 +1,56 @@
+.registration_page_container .registration_inner_container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+    width: 40%;
+    margin: 14rem auto !important;
+    padding: 1rem;
+}
+
+.registration_page_container .registration_inner_container form h1{
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.registration_page_container .registration_inner_container form p{
+    margin-bottom: 1.5rem;
+}
+
+.registration_page_container .registration_inner_container form input{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 5%, 88%);
+    padding: .9rem .8rem;
+    border-radius: .5rem;
+}
+
+.registration_page_container .registration_inner_container form select{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 5%, 88%);
+    padding: .9rem .8rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btnRegister{
+    color: #fff;
+    background: hsl(197, 97%, 46%);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btnRegister:hover{
+    color: #333;
+    background: #fff;
+    border: .1rem solid hsl(197, 93%, 47%);
+}
+
+.profile-co{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

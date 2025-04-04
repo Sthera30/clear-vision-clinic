@@ -1,0 +1,70 @@
+.about-us-heading h2{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+
+.about-us-heading h2 span{
+    color: hsl(197, 89%, 44%);
+}
+
+
+.about-us-container .about-us-right img{
+    width: 100%;
+    height: 30rem;
+    border: .5rem solid hsl(197, 96%, 47%);
+    object-fit: cover;
+}
+
+.about-us-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3%;
+}
+
+.about-us-left{
+    flex: 1 1 30rem;
+}
+
+.about-us-left h1{
+    font-size: 2.8rem;
+}
+
+.about-us-right{
+    flex: 1 1 30rem;
+}
+
+.about-us-left p{
+    color: hsl(0, 0%, 64%);
+    line-height: 1.5;
+    font-size: 1.3rem;
+}
+
+.btnReadMore{
+    color: #fff;
+    background: hsl(197, 97%, 43%);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.btnReadMore:hover{
+    color: #333;
+    background: #fff;
+    border: .1rem solid hsl(197, 93%, 44%);
+}
+
+.about-us-button-container{
+    display: flex;
+    align-items: center;
+}

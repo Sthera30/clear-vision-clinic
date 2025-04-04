@@ -1,0 +1,137 @@
+.frame-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3%;
+}
+
+.frame-inner-container h1{
+    color: hsl(197, 94%, 44%);
+}
+
+.frame-inner-container p{
+    color: hsl(0, 1%, 38%);
+}
+
+.frame-inner-container ul {
+    color: skyblue;
+}
+
+.frame-inner-container ul li{
+    color: #333;
+}
+
+.frame-inner-container ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .frame-inner-container li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .frame-inner-container li::before {
+    content: "•";
+    color: #3498db; /* Blue color */
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+
+  .clients-container{
+    background: hsl(197, 87%, 50%);
+    height: 30rem;
+    margin: 3rem 0rem;
+  }
+
+  .clients-container h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    color: #fff;
+    font-size: 2.5rem;
+  }
+
+  .clients-inner-container{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clients-inner-box{
+    background: #fff;
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+  }
+
+  .clients-inner-box p{
+    color: hsl(0, 1%, 41%);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .content-left img{
+    width: 5rem;
+    height: 5rem ;
+  }
+
+  .clients-inner-box .content{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .clients-inner-box .content p{
+    margin-top: -.7rem;
+    max-width: 30rem;
+  }
+
+  .appointment-burner{
+    background: hsl(197, 97%, 14%);
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 3rem;
+    padding: 2rem 2%;
+  }
+
+  .appointment-burner .appointment-inner-burner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .appointment-burner .appointment-inner-burner h1{
+    margin-top: 10rem;
+    color: skyblue;
+    font-size: 2.2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: .1rem solid #fff;
+  }
+
+  .appointment-burner .appointment-inner-burner p{
+    color: #fff;
+  }
+
+  .appointment-burner .appointment-inner-burner .btnAppointment{
+    color: #fff;
+    background: hsl(197, 97%, 37%);
+    padding: 1.2rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .appointment-burner .appointment-inner-burner .btnAppointment:hover{
+    color: #333;
+    border: .2rem solid hsl(197, 94%, 38%);
+    cursor: pointer;
+    background: #fff;
+  }

@@ -1,0 +1,37 @@
+.doctor-availability-container .doctor-availability-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+    width: 50%;
+    margin: 15rem auto;
+    padding: 1.5rem;
+}
+
+.doctor-availability-container .doctor-availability-inner h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.doctor-availability-container .doctor-availability-inner form{
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-availability-container .doctor-availability-inner form select{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 4%, 82%);
+    padding: .8rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+
+
+
+

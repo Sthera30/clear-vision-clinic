@@ -1,0 +1,128 @@
+/* 138d653cb515a8b78ed3c430085cbe62dfc43edc4c80fe8e6d6fd4fd541941e50b6ba710e41c78b78fc547a4972d1d379f495a55980bb2664610b01278c78c0dc0d8160128c38f65c6cad21008b2d29676201322400120cc3dee66c89e718293712b0f06fd6160c5f6d12fae723e9579bfbaa64c2874f12b738ba774beb533e3 */
+/*  */
+
+.blog-burner {
+    background: red;
+    height: 25rem;
+}
+
+.blog-inner h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 10rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.blog-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 2%;
+}
+
+.blog-box img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.blog-box .content h1{
+    font-size: 3rem;
+    font-weight: 300;
+    max-width: 45rem;
+}
+
+.blog-box .content .btnReadMore{
+    color: #fff;
+    background: red;
+    padding: 1rem 1.8rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+
+.blog-box .content .btnReadMore:hover{
+    background: hsl(0, 78%, 65%);
+}
+
+.blog-box .content .desc{
+    max-width: 35rem;
+    line-height: 1.4;
+}
+
+.blog-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-heading h1{
+    font-weight: 300;
+    font-size: 1.8rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.blog-heading h2{
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blog-content-info{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.blog-content-info p{
+    display: flex;
+    align-items: center;
+}
+
+.blog-box .content h1:hover{
+    color: red  !important;
+    cursor: pointer;
+}
+
+.blog-box{
+    flex: 1 1 30rem;
+    overflow: hidden;
+    height: 65rem;
+}
+
+.blog-box .content p{
+    line-height: 1.7;
+}
+
+.blog-box:hover img{
+    transform: scale(1.0);
+}
+
+.blog-burner {
+    background: red;
+    height: 25rem;
+}
+
+.blog-burner-inner h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 10rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

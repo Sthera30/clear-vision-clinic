@@ -1,0 +1,72 @@
+
+.email-verification-container .email-verification-inner form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.2);
+    width: 30%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    margin: 12rem auto;
+}
+
+.co-email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.co-email h2{
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.co-email p{
+    margin-top: -.2rem;
+    color: hsl(0, 1%, 41%);
+}
+
+.email-verification-container .email-verification-inner form input{
+    margin: 1rem 0rem;
+    width: 100% !important;
+    padding: .8rem 1rem;
+    border: .1rem solid hsl(0, 4%, 84%);
+    border-radius: .5rem;
+}
+
+.email-verification-container .email-verification-inner form h1{
+    font-size: 2rem;
+}
+
+.support{
+    text-align: center;
+    margin-top: -8rem;
+}
+
+.email{
+    color: blue;
+    font-size: 3rem;
+    background: hsl(200, 52%, 89%);
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 1.5rem;
+    border-radius: 50%;
+}
+
+.btnVerify{
+    color: #fff;
+    background: hsl(197, 95%, 42%);
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.btnVerify:hover{
+    background: none;
+    border: .1rem solid hsl(197, 89%, 67%);
+    color: #333;
+}

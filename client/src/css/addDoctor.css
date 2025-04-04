@@ -1,0 +1,109 @@
+.add-doctor-container .add-doctor-inner {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+    background: #fff;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .5);
+    width: 60%;
+    padding: 1.5rem;
+}
+
+.add-doctor-inner h1{
+    font-weight: 300;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.doc-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-doctor-inner form .doc-container .doc-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20rem;
+}
+
+.add-doctor-inner form .doc-container .doc-left input{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 6%, 84%);
+    padding: .8rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.add-doctor-inner form .doc-container .doc-right input{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 6%, 84%);
+    padding: .8rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.doc-right select{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 6%, 84%);
+    padding: .8rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.doc-right textarea{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 6%, 84%);
+    padding: .8rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+
+
+.doc-inner-container textarea{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 6%, 84%);
+    padding: .8rem;
+    border-radius: .5rem;
+    width: 95%;
+    margin-left: 1rem;
+}
+
+.doc-left select{
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 6%, 84%);
+    padding: .8rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.doc-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20rem;
+}
+
+.about-doc{
+    margin-left: 1rem;
+}
+
+.button-add button{
+    color: #fff;
+    background: hsl(197, 98%, 45%);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: 3rem;
+}
+
+.button-add button:hover{
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    border: .1rem solid hsl(197, 97%, 45%);
+}
+
+.button-add button:hover .plus{
+    color: #333 !important;
+}

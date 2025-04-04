@@ -1,0 +1,77 @@
+.about-us-content{
+    padding: 2rem 3%;
+}
+
+.about-us-content h1{
+    color: hsl(197, 97%, 47%);
+    font-size: 2.5rem;
+}
+
+.about-us-content p{
+    max-width: 60rem;
+    line-height: 1.5;
+    color: hsl(0, 1%, 53%);
+    font-size: 1.2rem;
+}
+
+.about-us-content ul li{
+    line-height: 1.5;
+    color: hsl(0, 1%, 53%);
+}
+
+.meet-our-doctors .meet-our-doctor-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.meet-our-doctors .meet-our-doctor-inner h1{
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.meet-our-doctors .meet-our-doctor-inner h1 span{
+    color: hsl(197, 95%, 43%);
+}
+
+.meet-our-doctors .meet-our-doctor-inner h2{
+    font-weight: 300;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+
+.doc-container .doc-box .doc-content{
+    height: 25rem;
+    padding: 1rem;
+}
+
+.doc-container .doc-box .doc-content p{
+    line-height: 1.5;
+}
+
+.doc-container .doc-box .doc-content .button-container{
+    margin-top: 5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.doc-container .doc-box .doc-content .button-container .btnAppointment{
+    background: hsl(197, 95%, 32%);
+    color: #fff;
+    border-radius: 3rem;
+    border: .1rem solid hsl(197, 95%, 36%);
+    padding: 1.1rem 1.8rem;
+}
+
+.doc-container .doc-box .doc-content .button-container .btnAppointment:hover{
+    background: #fff !important;
+    color: #333 ;
+}

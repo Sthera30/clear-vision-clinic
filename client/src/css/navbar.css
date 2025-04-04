@@ -1,0 +1,99 @@
+.logo-design img {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+}
+
+.logo-design {
+    display: flex;
+    align-items: center !important;
+}
+
+.logo-design span {
+    margin-left: 1rem;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: hsl(197, 85%, 51%);
+    padding: 2.5rem 5%;
+    z-index: 1000;
+}
+
+.header .right-design a {
+    margin-left: 1.5rem;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+
+.right-design {
+    display: flex;
+    align-items: center;
+}
+
+.btnLogin {
+    background: blue;
+    padding: .8rem 1.8rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btnLogout {
+    background: blue;
+    padding: 1rem 1.8rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.btnLogout:hover {
+    background: #fff;
+    color: #333 !important;
+}
+
+.btnLogin:hover {
+    background: hsl(240, 76%, 53%);
+    color: #fff !important;
+}
+
+.admin-functionality {
+    position: absolute;
+    top: 8rem;
+    right: 11rem;
+    display: flex;
+    flex-direction: column;
+    background: hsl(197, 95%, 57%);
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.2);
+    width: 18%;
+}
+
+.admin-functionality a {
+    color: #fff !important;
+    margin: 1rem 0rem;
+    cursor: pointer;
+}
+
+.admin {
+    border-bottom: .1rem solid #fff;
+    width: 70%;
+    padding-bottom: 1rem;
+}
+
+.showInfo {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hideInfo {
+    clip-path: polygon(0 0, 100% 0%, 100% 0%, 0 0);
+}

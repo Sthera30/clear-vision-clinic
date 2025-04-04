@@ -1,0 +1,46 @@
+.add-about-us-container .add-about-us-container-inner {
+    background: #fff;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+    width: 40%;
+    padding: 1rem;
+    margin: 10rem auto;
+}
+
+.add-about-us-container .add-about-us-container-inner h1{
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.add-about-us-container .add-about-us-container-inner form{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-about-us-container .add-about-us-container-inner form input{
+    border: .1rem solid hsl(0, 3%, 81%);
+    border-radius: .5rem;
+    padding: .9rem;
+    margin: 1rem 0rem;
+}
+
+.add-about-us-container .add-about-us-container-inner form textarea{
+    border: .1rem solid hsl(0, 3%, 81%);
+    border-radius: .5rem;
+    padding: .9rem;
+    margin: 1rem 0rem;
+}
+
+.add-about-us-container .add-about-us-container-inner form button{
+    color: #fff;
+    background: hsl(197, 93%, 41%);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-radius: 3rem;
+    font-size: 1.1rem;
+}
+
+.add-about-us-container .add-about-us-container-inner form button:hover{
+    color: #333;
+    background: #fff;
+    border: .1rem solid hsl(197, 94%, 44%);
+}

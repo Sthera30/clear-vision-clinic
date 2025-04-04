@@ -1,0 +1,146 @@
+.appointment-container- img {
+    width: 100%;
+    height: 75rem;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.appointment-container- {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 3%;
+    margin-top: 8rem;
+}
+
+.appointment-container- .appointment-left {
+    flex: 1 1 28rem;
+}
+
+.appointment-container- .appointment-right {
+    flex: 1 1 28rem;
+    background: hsl(196, 44%, 95%);
+    padding: 1rem;
+    height: 75rem;
+}
+
+.appointment-right h1{
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.appointment-right p{
+    color: #333;
+    font-weight: 800;
+    max-width: 35rem;
+    line-height: 1.5;
+}
+
+.appointment-right p span{
+    color: #333;
+    font-weight: 300 !important;
+}
+
+.about{
+    font-weight: 300 !important;
+}
+
+.booking-info h1{
+    font-size: 2rem;
+    margin-top: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.booking-info p{
+    font-weight: 300;
+}
+
+.date-selecion{
+    display: flex;
+    flex-direction: column;
+}
+
+.date-selecion select{
+    margin: 1rem 0rem;
+    padding: .9rem;
+    cursor: pointer;
+}
+
+.button-time-slots{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.button-time-slots button{
+    color: #fff;
+    background: skyblue;
+    border: .1rem solid skyblue;
+    padding: 1rem 2rem;
+    font-weight: 800;
+}
+
+.button-time-slots button:hover{
+    background: blue;
+    cursor: pointer;
+}
+
+.appointment-co{
+    padding: 2rem 3%;
+    background: hsl(196, 47%, 90%);
+    margin-bottom: 2rem;
+    width: 46%;
+    margin-left: 3%;
+}
+
+.date-selections{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-selections select{
+    margin: 1rem 0rem;
+    padding: .9rem;
+    cursor: pointer;
+}
+
+.date-selections textarea{
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.btnBook{
+    color: #fff;
+    background: hsl(197, 95%, 36%);
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: 800;
+    border-radius: 3rem;
+}
+
+.btnBook:hover{
+    background: hsl(197, 88%, 49%);
+}
+
+
+.button-time-slots{
+    display: flex;
+    align-items: center;
+}
+
+.button-time{
+    display: flex;
+    align-items: center;
+}
+
+.button-time-slots select{
+    margin: 1rem 0rem;
+    padding: .9rem;
+    cursor: pointer;
+    width: 100%;
+}
