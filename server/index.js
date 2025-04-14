@@ -99,9 +99,11 @@ export { db }
 */
 
 pool.connect().then(() => console.log("Connected to PostgreSQL"))
-.catch(err => console.error('Connection error', err.stack));
+    .catch(err => console.error('Connection error', err.stack));
 
-
+app.get("/", (req, res) => {
+    console.log("Hello!");
+})
 
 const PORT = 5000;
 
