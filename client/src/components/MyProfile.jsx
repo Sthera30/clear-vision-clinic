@@ -21,7 +21,7 @@ function MyProfile() {
 
         try {
 
-            const res = await axios.get(`http://localhost:5000/getUserInfoByEmail?email=${user.email}`)
+            const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getUserInfoByEmail?email=${user.email}`)
 
             if (res.data.success) {
                 setUserInfo(res.data.data.userEmail);

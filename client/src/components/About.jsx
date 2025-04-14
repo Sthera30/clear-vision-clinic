@@ -17,7 +17,7 @@ function About() {
 
         try {
 
-            const res = await axios.get(`http://localhost:5000/getAllAboutUs`)
+            const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getAllAboutUs`)
 
             if (res.data.success) {
                 setAboutUs(res.data.data.aboutUs)
@@ -41,7 +41,7 @@ function About() {
 
         try {
 
-            const res = await axios.delete(`http://localhost:5000/removeAboutUs?id=${id}`)
+            const res = await axios.delete(`https://clear-vision-clinic-backend.vercel.app/removeAboutUs?id=${id}`)
 
             if (res.data.success) {
                 toast.success(res.data.message)

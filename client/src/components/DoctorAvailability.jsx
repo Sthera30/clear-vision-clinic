@@ -15,7 +15,7 @@ function DoctorAvailability() {
     // Fetch all doctors
     async function handle_fetch_doctor() {
         try {
-            const res = await axios.get("http://localhost:5000/getAllDoctor");
+            const res = await axios.get("https://clear-vision-clinic-backend.vercel.app/getAllDoctor");
             if (res.data.success) {
                 setDoctor(res.data.data.doctors);
                 // Set initial doctor if available
@@ -65,7 +65,7 @@ function DoctorAvailability() {
                 }
             }
     
-            const response = await axios.post("http://localhost:5000/addDoctorAvailability", {
+            const response = await axios.post("https://clear-vision-clinic-backend.vercel.app/addDoctorAvailability", {
                 entries: availabilityEntries
             });
     

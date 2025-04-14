@@ -32,7 +32,7 @@ function Registration() {
 
         try {
 
-            const { data } = await axios.post("http://localhost:5000/upload", formData)
+            const { data } = await axios.post("https://clear-vision-clinic-backend.vercel.app/upload", formData)
 
             setUploading(false)
 
@@ -59,7 +59,7 @@ function Registration() {
 
         try {
 
-            const res = await axios.post("http://localhost:5000/register", {profilepicture, fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob, password, confirmpassword})
+            const res = await axios.post("https://clear-vision-clinic-backend.vercel.app/register", {profilepicture, fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob, password, confirmpassword})
 
             if(res.data.success){
                 toast.success(res.data.message)

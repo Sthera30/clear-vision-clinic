@@ -21,7 +21,7 @@ function VerifyOtp() {
     try {
 
 
-      const res = await axios.post(`http://localhost:5000/verifyOtp`, { otp, email: localStorage.getItem("email") })
+      const res = await axios.post(`https://clear-vision-clinic-backend.vercel.app/verifyOtp`, { otp, email: localStorage.getItem("email") })
 
       if (res.data.success) {
         toast.success(res.data.message)

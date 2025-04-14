@@ -23,7 +23,7 @@ function AddDoctor() {
 
         try {
 
-            const res = await axios.post("http://localhost:5000/addDoctor", { profilepicture, doctorname, doctoremail, doctorexperience, doctorfee, doctoraddressline1, doctorqualification, doctorspeciality, doctoraddressline2, aboutdoctor, password, confirmpassword })
+            const res = await axios.post("https://clear-vision-clinic-backend.vercel.app/addDoctor", { profilepicture, doctorname, doctoremail, doctorexperience, doctorfee, doctoraddressline1, doctorqualification, doctorspeciality, doctoraddressline2, aboutdoctor, password, confirmpassword })
 
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -51,7 +51,7 @@ function AddDoctor() {
 
         try {
 
-            const { data } = await axios.post("http://localhost:5000/upload", formData)
+            const { data } = await axios.post("https://clear-vision-clinic-backend.vercel.app/upload", formData)
 
             setUploading(false)
 
