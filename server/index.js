@@ -103,7 +103,11 @@ pool.connect().then(() => console.log("Connected to PostgreSQL"))
 
 app.get("/", (req, res) => {
     console.log("Hello!");
+    res.send("Api is working...")
 })
+
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 
 const PORT = 5000;
 
