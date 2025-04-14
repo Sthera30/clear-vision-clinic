@@ -6,6 +6,9 @@ import { uploadImage } from './controller/imageUpload.js'
 import ExpressFormidable from 'express-formidable'
 import cookieParser from 'cookie-parser'
 import { protect } from './middleware/authentication_middleware.js'
+import pool from './controller/db.js'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express()
 
@@ -67,7 +70,7 @@ app.post("/verifyOtp", verifyOtp)
 app.put("/changePassword", change_password)
 
 
-const db = mysql.createConnection({
+/* const db = mysql.createConnection({
 
     user: 'root',
     host: 'localhost',
@@ -92,6 +95,12 @@ db.connect((err) => {
 })
 
 export { db }
+
+*/
+
+pool.connect().then(() => console.log("Connected to PostgreSQL"))
+.catch(err => console.error('Connection error', err.stack));
+
 
 
 const PORT = 5000;

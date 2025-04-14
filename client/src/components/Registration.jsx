@@ -10,7 +10,7 @@ function Registration() {
 
     const [image, setImage] = useState({})
     const [upload, setUploading] = useState(false)
-    const [data, setData] = useState({profilePicture: '', fullName: '', lastName: '', email: '', telNo: '', addressLine1: '', addressLine2: '', gender: '', role: '', dob: '', password: '', confirmPassword: ''})
+    const [data, setData] = useState({profilepicture: '', fullname: '', lastname: '', email: '', telno: '', addressline1: '', addressline2: '', gender: '', role: '', dob: '', password: '', confirmpassword: ''})
 
 
     const navuigate = useNavigate()
@@ -41,7 +41,7 @@ function Registration() {
                 public_id: data.public_id
             })
 
-            setData(prevData => ({ ...prevData, profilePicture: data.url }))
+            setData(prevData => ({ ...prevData, profilepicture: data.url }))
 
         } catch (error) {
             console.log(error);
@@ -55,11 +55,11 @@ function Registration() {
 
         e.preventDefault()
 
-        const {profilePicture, fullName, lastName, email, telNo, addressLine1, addressLine2, gender, role, dob, password, confirmPassword} = data
+        const {profilepicture, fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob, password, confirmpassword} = data
 
         try {
 
-            const res = await axios.post("http://localhost:5000/register", {profilePicture, fullName, lastName, email, telNo, addressLine1, addressLine2, gender, role, dob, password, confirmPassword})
+            const res = await axios.post("http://localhost:5000/register", {profilepicture, fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob, password, confirmpassword})
 
             if(res.data.success){
                 toast.success(res.data.message)
@@ -103,17 +103,17 @@ function Registration() {
 
                         </div>
                         <label>Full Name</label>
-                        <input type='text' name='name' placeholder='Please enter your full name' onChange={(e) => setData({...data, fullName: e.target.value})} />
+                        <input type='text' name='name' placeholder='Please enter your full name' onChange={(e) => setData({...data, fullname: e.target.value})} />
                         <label>Last Name</label>
-                        <input type='text' name='lastname' placeholder='Please enter your last name' onChange={(e) => setData({...data, lastName: e.target.value})} />
+                        <input type='text' name='lastname' placeholder='Please enter your last name' onChange={(e) => setData({...data, lastname: e.target.value})} />
                         <label>Email Address</label>
                         <input type='email' name='email' placeholder='Please enter your email address' onChange={(e) => setData({...data, email: e.target.value}) } />
                         <label>Tel No:</label>
-                        <input type='tel' name='telephone' minLength={10} maxLength={10} pattern='^0[0-9]{9}$' placeholder='Please enter your telephon number' onChange={(e) => setData({...data, telNo: e.target.value})} />
+                        <input type='tel' name='telephone' minLength={10} maxLength={10} pattern='^0[0-9]{9}$' placeholder='Please enter your telephon number' onChange={(e) => setData({...data, telno: e.target.value})} />
                         <label>Address Line 1:</label>
-                        <input type='text' name='address' placeholder='Please enter your address line 1' onChange={(e) => setData({...data, addressLine1: e.target.value})} />
+                        <input type='text' name='address' placeholder='Please enter your address line 1' onChange={(e) => setData({...data, addressline1: e.target.value})} />
                         <label>Address Line 2: &nbsp; <span style={{ color: 'red' }}>optional</span></label>
-                        <input type='text' name='address' placeholder='Please enter your address line 2' onChange={(e) => setData({...data, addressLine2: e.target.value})} />
+                        <input type='text' name='address' placeholder='Please enter your address line 2' onChange={(e) => setData({...data, addressline2: e.target.value})} />
                         <label>Gender</label>
                         <select onChange={(e) => setData({...data, gender: e.target.value})}>
 
@@ -127,7 +127,7 @@ function Registration() {
                         <label>Password</label>
                         <input type="password" name='password' placeholder='Enter your password' onChange={(e) => setData({...data, password: e.target.value})} />
                         <label>Confirm Password</label>
-                        <input type="password" name='password' placeholder='Please confirm your password' onChange={(e) => setData({...data, confirmPassword:e.target.value})} />
+                        <input type="password" name='password' placeholder='Please confirm your password' onChange={(e) => setData({...data, confirmpassword:e.target.value})} />
                         <button className='btnRegister'>Register</button>
                         <p>Already have an account? <NavLink to={'/login/'} style={{ color: 'blue' }}>Click here</NavLink></p>
 

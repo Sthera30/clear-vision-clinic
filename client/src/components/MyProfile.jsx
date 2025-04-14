@@ -61,9 +61,9 @@ function MyProfile() {
                 <div className='my-profile-inner'>
 
                     <span>
-                        {userInfo?.fullName?.charAt(0).toUpperCase()}{userInfo?.lastName?.charAt(0).toUpperCase()}
+                        {userInfo?.fullname?.charAt(0).toUpperCase()}{userInfo?.lastname?.charAt(0).toUpperCase()}
                     </span>
-                    <p>{userInfo?.fullName + " " + userInfo?.lastName}</p>
+                    <p>{userInfo?.fullname + " " + userInfo?.lastname}</p>
                     {user?.role === "user" ? <p style={{paddingBottom: '1rem'}}>patient</p> : user?.role === "admin" ? <p style={{paddingBottom: '1rem'}}>admin</p> : <p>doctor</p>}
                     <div className='button-edit-profile'>
 
@@ -82,22 +82,22 @@ function MyProfile() {
                 <div className='my-profile-container-'>
 
                     <label>First Name</label>
-                    <input type='text' value={user?.fullName} disabled />
+                    <input type='text' value={user?.fullname} disabled />
 
                     <label>Last Name</label>
-                    <input type='text' value={user?.lastName} disabled />
+                    <input type='text' value={user?.lastname} disabled />
 
                     <label>Email</label>
                     <input type='text' value={user?.email} disabled />
 
                     <label>Tel No</label>
-                    <input type='text' value={user?.telNo} disabled />
+                    <input type='text' value={user?.telno} disabled />
 
                     <label>AddressLine 1</label>
-                    <input type='text' value={user?.addressLine1} disabled />
+                    <input type='text' value={user?.addressline1} disabled />
 
                     <label>AddressLine 2</label>
-                    <input type='text' value={user?.addressLine2} disabled />
+                    <input type='text' value={user?.addressline2} disabled />
 
                     <label>Gender</label>
                     <input type='text' value={user?.gender} disabled />

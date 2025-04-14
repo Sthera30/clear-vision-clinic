@@ -68,29 +68,29 @@ function ManageAppointment() {
 
                             <div className='box-content-left'>
 
-                                <p><FaUserDoctor style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Doctor Name: {appointment?.doctorName}</p>
+                                <p><FaUserDoctor style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Doctor Name: {appointment?.doctorname}</p>
 
                             </div>
 
 
                             <div className='box-content-right'>
 
-                                <p>Appointment status:&nbsp;{appointment?.Status === "Rejected" ? <span className='rejected'>{appointment?.Status}</span> : appointment?.Status === "Approved" ? <span className='approved'>{appointment?.Status}</span> : <span className='approved'>{appointment?.Status}</span>}</p>
+                                <p>Appointment status:&nbsp;{appointment?.status === "Rejected" ? <span className='rejected'>{appointment?.status}</span> : appointment?.status === "Approved" ? <span className='approved'>{appointment?.status}</span> : <span className='approved'>{appointment?.status}</span>}</p>
 
                             </div>
 
                         </div>
 
-                        <p><FaUser style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;User Name: {appointment?.userName}</p>
-                        <p><SlCalender style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Appointment Date: {new Date(appointment?.appointmentDate).toLocaleDateString('en-GB', {
+                        <p><FaUser style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;User Name: {appointment?.username}</p>
+                        <p><SlCalender style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Appointment Date: {new Date(appointment?.appointmentdate).toLocaleDateString('en-GB', {
                             day: '2-digit',
                             month: 'long',
                             weekday: 'long',
                             year: 'numeric'
                         })}</p>
-                        <p><IoMdTime style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Appointment Time: {appointment?.appointmentTime}</p>
-                        <p><BsCalendarCheck style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Appointment Type: {appointment?.appointmentType}</p>
-                        <p><FaHospital style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Reason For Visit: {appointment?.reasonForVisit}</p>
+                        <p><IoMdTime style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Appointment Time: {appointment?.appointmenttime}</p>
+                        <p><BsCalendarCheck style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Appointment Type: {appointment?.appointmenttype}</p>
+                        <p><FaHospital style={{ color: 'black', fontSize: '1.5rem' }} />&nbsp;&nbsp;Reason For Visit: {appointment?.reasonforvisit}</p>
 
                         <div className='button-edit'>
 

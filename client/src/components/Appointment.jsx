@@ -12,7 +12,7 @@ function Appointmenr() {
   const [doc, setDoc] = useState([])
   const [docTimeSlot, setDocTimeSlot] = useState([])
   const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
-  const [dataAppointment, setDataAppointment] = useState({ appointmentDate: '', appointmentTime: '', appointmentType: '', reasonForVisit: '' })
+  const [dataAppointment, setDataAppointment] = useState({ appointmentdate: '', appointmenttime: '', appointmenttype: '', reasonforvisit: '' })
 
   const { user, setUser } = useUserContext()
 
@@ -34,8 +34,8 @@ function Appointmenr() {
 
       if (res.data.success) {
         setData(res.data.data.doctor)
-        handle_fetch_doctor_availibility_by_name(res.data.data.doctor.doctorName)
-        handle_fetch_doc_time_slot(res.data.data.doctor.doctorName)
+        handle_fetch_doctor_availibility_by_name(res.data.data.doctor.doctorname)
+        handle_fetch_doc_time_slot(res.data.data.doctor.doctorname)
       }
 
       else {
@@ -49,11 +49,11 @@ function Appointmenr() {
 
   }
 
-  async function handle_fetch_doctor_availibility_by_name(doctorName) {
+  async function handle_fetch_doctor_availibility_by_name(doctorname) {
 
     try {
 
-      const res = await axios.get(`http://localhost:5000/getDoctorAvailabilityByName?doctorName=${doctorName}`)
+      const res = await axios.get(`http://localhost:5000/getDoctorAvailabilityByName?doctorname=${doctorname}`)
 
       if (res.data.success) {
         setDoc(res.data.data.doctorAvailability);
@@ -70,11 +70,11 @@ function Appointmenr() {
 
   }
 
-  async function handle_fetch_doc_time_slot(doctorName) {
+  async function handle_fetch_doc_time_slot(doctorname) {
 
     try {
 
-      const res = await axios.get(`http://localhost:5000/getDocAvailabilityTimeByDocName?doctorName=${doctorName}`)
+      const res = await axios.get(`http://localhost:5000/getDocAvailabilityTimeByDocName?doctorname=${doctorname}`)
 
       if (res.data.success) {
         setDocTimeSlot(res.data.data.docTimeSlot)
@@ -96,11 +96,11 @@ function Appointmenr() {
 
     e.preventDefault()
 
-    const { appointmentDate, appointmentTime, appointmentType, reasonForVisit } = dataAppointment
+    const { appointmentdate, appointmenttime, appointmenttype, reasonforvisit } = dataAppointment
 
     try {
 
-      const res = await axios.post('http://localhost:5000/addAppointment', { doctorName: data?.doctorName, userName: user?.fullName, email: user?.email, appointmentDate, appointmentTime, appointmentType, reasonForVisit })
+      const res = await axios.post('http://localhost:5000/addAppointment', { doctorname: data?.doctorname, username: user?.fullname, email: user?.email, appointmentdate, appointmenttime, appointmenttype, reasonforvisit })
 
       if (res.data.success) {
         toast.success(res.data.message)
@@ -131,23 +131,23 @@ function Appointmenr() {
 
         <div className='appointment-left'>
 
-          <img src={data?.profilePicture} alt="" />
+          <img src={data?.profilepicture} alt="" />
 
         </div>
 
         <div className='appointment-right'>
 
           <h1>{data.doctorName}</h1>
-          <p>Doctor qualification: <span>{data.doctorQualification}</span></p>
-          <p>Doctor speciality: <span>{data.doctorSpeciality}</span></p>
-          <p>Experience: <span>{data.doctorExperience}</span></p>
+          <p>Doctor qualification: <span>{data.doctorqualification}</span></p>
+          <p>Doctor speciality: <span>{data.doctorspeciality}</span></p>
+          <p>Experience: <span>{data.doctorexperience}</span></p>
           <h2>About</h2>
-          <p className='about'>{data.aboutDoctor}</p>
-          <p>Doctor fee: <span>{`R${data.doctorFee}`}</span></p>
+          <p className='about'>{data.aboutdoctor}</p>
+          <p>Doctor fee: <span>{`R${data.doctorfee}`}</span></p>
 
           <div className='booking-info'>
 
-            <h1>Book an Appointment with {data.doctorName}</h1>
+            <h1>Book an Appointment with {data.doctorname}</h1>
             <p>Select an available date and time slot below</p>
 
             <form onSubmit={handle_submit}>
@@ -156,7 +156,7 @@ function Appointmenr() {
 
                 <label>Select Date:</label>
 
-                <select onChange={(e) => setDataAppointment({ ...dataAppointment, appointmentDate: e.target.value })}>
+                <select onChange={(e) => setDataAppointment({ ...dataAppointment, appointmentdate: e.target.value })}>
 
                   <option value="">Select a date</option> {/* Default placeholder */}
 
@@ -180,10 +180,10 @@ function Appointmenr() {
               <div className='button-time-slots'>
 
 
-                <select onChange={(e) => setDataAppointment({ ...dataAppointment, appointmentTime: e.target.value })}>
+                <select onChange={(e) => setDataAppointment({ ...dataAppointment, appointmenttime: e.target.value })}>
 
-                  {docTimeSlot.filter(docTimeSlots => docTimeSlots.timeSlot).map((docTimeSlots, index) => (
-                    <option key={index}>{docTimeSlots.timeSlot}</option>
+                  {docTimeSlot.filter(docTimeSlots => docTimeSlots.timeslot).map((docTimeSlots, index) => (
+                    <option key={index}>{docTimeSlots.timeslot}</option>
                   ))}
 
                 </select>
@@ -196,7 +196,7 @@ function Appointmenr() {
               <div className='date-selections'>
 
                 <label>Appointment Type</label>
-                <select onChange={(e) => setDataAppointment({ ...dataAppointment, appointmentType: e.target.value })}>
+                <select onChange={(e) => setDataAppointment({ ...dataAppointment, appointmenttype: e.target.value })}>
 
                   <option>Consultation</option>
                   <option>Follow-up</option>
@@ -205,7 +205,7 @@ function Appointmenr() {
                 </select>
 
                 <label>Reason for visit:</label>
-                <textarea onChange={(e) => setDataAppointment({ ...dataAppointment, reasonForVisit: e.target.value })} rows={10} cols={10} placeholder='brief description of the patients concern...'></textarea>
+                <textarea onChange={(e) => setDataAppointment({ ...dataAppointment, reasonforvisit: e.target.value })} rows={10} cols={10} placeholder='brief description of the patients concern...'></textarea>
 
               </div>
 

@@ -23,8 +23,11 @@ function About() {
                 setAboutUs(res.data.data.aboutUs)
             }
 
+
             else {
                 toast.error(res.data.error)
+                console.log("H");
+
             }
 
         } catch (error) {
@@ -79,9 +82,9 @@ function About() {
 
                 <div className='about-us-left'>
 
-                    <h1>{aboutUs[0]?.aboutUsHeading}</h1>
+                    <h1>{aboutUs[0]?.aboutusheading}</h1>
 
-                    <p>{aboutUs[0]?.aboutUsDescription}</p>
+                    <p>{aboutUs[0]?.aboutusdescription}</p>
 
                     <div className='about-us-button-container'>
 
@@ -94,7 +97,7 @@ function About() {
 
                 <div className='about-us-right'>
 
-                    <img src={aboutUs[0]?.profilePicture} alt="Woman getting here eyes checked" />
+                    <img src={aboutUs[0]?.profilepicture} alt="Woman getting here eyes checked" />
 
                 </div>
 

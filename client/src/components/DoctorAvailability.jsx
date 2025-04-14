@@ -8,8 +8,8 @@ function DoctorAvailability() {
     const [activeDate, setActiveDate] = useState(null);
     const [timeInput, setTimeInput] = useState({ start: '09:00', end: '17:00' });
     const [doctor, setDoctor] = useState([]);
-    const [doctorName, setDoctorName] = useState('');
-    const [availableStatus, setAvailableStatus] = useState('Available');
+    const [doctorname, setDoctorName] = useState('');
+    const [availablestatus, setAvailableStatus] = useState('Available');
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Fetch all doctors
@@ -20,7 +20,7 @@ function DoctorAvailability() {
                 setDoctor(res.data.data.doctors);
                 // Set initial doctor if available
                 if (res.data.data.doctors && res.data.data.doctors.length > 0) {
-                    setDoctorName(res.data.data.doctors[0].doctorName);
+                    setDoctorName(res.data.data.doctors[0].doctorname);
                 }
             } else {
                 toast.error(res.data.error);
@@ -48,18 +48,18 @@ function DoctorAvailability() {
                 if (selectedDateTimes[dateString].length === 0) {
                     // If no time slots are selected, push only the date
                     availabilityEntries.push({
-                        doctorName,
-                        Date: dateString,
-                        timeSlot: null, // Send null if no time is selected
-                        availableStatus
+                        doctorname,
+                        date: dateString,
+                        timeslot: null, // Send null if no time is selected
+                        availablestatus
                     });
                 } else {
-                    for (const timeSlot of selectedDateTimes[dateString]) {
+                    for (const timeslot of selectedDateTimes[dateString]) {
                         availabilityEntries.push({
-                            doctorName,
-                            Date: dateString,
-                            timeSlot: `${timeSlot.start}-${timeSlot.end}`,
-                            availableStatus
+                            doctorname,
+                            date: dateString,
+                            timeslot: `${timeslot.start}-${timeslot.end}`,
+                            availablestatus
                         });
                     }
                 }
@@ -479,7 +479,7 @@ function DoctorAvailability() {
                         <label>Doctor</label>
                         <select onChange={(e) => setDoctorName(e.target.value)}>
                             {doctor.map((doc, index) => (
-                                <option key={index}>{doc.doctorName}</option>
+                                <option key={index}>{doc.doctorname}</option>
                             ))}
                         </select>
 

@@ -7,7 +7,7 @@ import { useUserContext } from '../context/userContext.jsx';
 
 function EditAppointment() {
 
-    const [data, setData] = useState({ appointmentDate: '', appointmentTime: '' })
+    const [data, setData] = useState({ appointmentdate: '', appointmenttime: '' })
     const [docTime, setDocTime] = useState([])
     const [dateTime, setDateTime] = useState([])
 
@@ -38,7 +38,7 @@ function EditAppointment() {
 
     }
 
-    async function handle_fetch_appointment_availability_time_by_doc_name(doctorName) {
+    async function handle_fetch_appointment_availability_time_by_doc_name(doctorname) {
 
         try {
 
@@ -58,7 +58,7 @@ function EditAppointment() {
 
     }
 
-    async function handle_fetch_appointment_availability_date_by_doc_name(doctorName) {
+    async function handle_fetch_appointment_availability_date_by_doc_name(doctorname) {
 
         try {
 

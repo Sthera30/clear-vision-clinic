@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 function ChangePassword() {
 
-    const [data, setData] = useState({ password: '', confirmPassword: '' })
+    const [data, setData] = useState({ password: '', confirmpassword: '' })
 
     const navigate = useNavigate()
 
@@ -14,11 +14,11 @@ function ChangePassword() {
 
         e.preventDefault()
 
-        const { password, confirmPassword } = data
+        const { password, confirmpassword } = data
 
         try {
 
-            const res = await axios.put(`http://localhost:5000/changePassword`, { password, confirmPassword, email: localStorage.getItem("email") })
+            const res = await axios.put(`http://localhost:5000/changePassword`, { password, confirmpassword, email: localStorage.getItem("email") })
 
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -56,7 +56,7 @@ function ChangePassword() {
                         <label>New Password</label>
                         <input type="password" placeholder='Enter new password...' onChange={(e) => setData({ ...data, password: e.target.value })} />
                         <label>Confirm Password</label>
-                        <input type="password" placeholder='Confirm password...' onChange={(e) => setData({ ...data, confirmPassword: e.target.value })} />
+                        <input type="password" placeholder='Confirm password...' onChange={(e) => setData({ ...data, confirmpassword: e.target.value })} />
                         <button type='submit'>Update Password</button>
 
                     </form>

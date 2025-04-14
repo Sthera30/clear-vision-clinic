@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import imgAvator from '../../public/avator.png'
 import '../css/editService.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 
@@ -10,7 +10,7 @@ function EditSService() {
 
     const [image, setImage] = useState({})
     const [upload, setUploading] = useState(false)
-    const [data, setData] = useState({ profilePicture: '', serviceHeading: '', serviceDescription: '' })
+    const [data, setData] = useState({ profilepicture: '', serviceheading: '', servicedescription: '' })
 
     const { id } = useParams()
 
@@ -35,6 +35,7 @@ function EditSService() {
 
     }
 
+    const navigate = useNavigate()
 
     useEffect(() => {
 
@@ -73,27 +74,28 @@ function EditSService() {
 
     async function handle_submit(e) {
 
-        const {profilePicture, serviceHeading, serviceDescription} = data
+        const { profilepicture, serviceheading, servicedescription } = data
 
         e.preventDefault()
 
         try {
 
-            const res = await axios.put(`http://localhost:5000/updateServices`, {id, profilePicture, serviceHeading, serviceDescription})
+            const res = await axios.put(`http://localhost:5000/updateServices`, { id, profilepicture, serviceheading, servicedescription })
 
-            if(res.data.success){
+            if (res.data.success) {
                 toast.success(res.data.message)
+                navigate("/")
             }
 
-            else{
+            else {
                 toast.error(res.data.error)
             }
-            
+
         } catch (error) {
             console.log(error);
-            
+
         }
-        
+
     }
 
     return (
@@ -122,9 +124,9 @@ function EditSService() {
                         </div>
 
                         <label>Services Heading</label>
-                        <input type='text' placeholder='Enter services heading...' value={data?.serviceHeading} onChange={(e) => setData({ ...data, serviceHeading: e.target.value })} />
+                        <input type='text' placeholder='Enter services heading...' value={data?.serviceheading} onChange={(e) => setData({ ...data, serviceheading: e.target.value })} />
                         <label>Services description</label>
-                        <textarea cols={10} rows={10} placeholder='Enter services descrption...' value={data?.serviceDescription} onChange={(e) => setData({ ...data, serviceDescription: e.target.value })}></textarea>
+                        <textarea cols={10} rows={10} placeholder='Enter services descrption...' value={data?.servicedescription} onChange={(e) => setData({ ...data, servicedescription: e.target.value })}></textarea>
                         <button type='submit'>Update services</button>
 
                     </form>

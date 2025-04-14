@@ -10,7 +10,7 @@ function EditDoctor() {
 
     const [image, setImage] = useState({})
     const [upload, setUploading] = useState(false)
-    const [data, setData] = useState({ profilePicture: '', doctorName: '', doctorEmail: '', doctorExperience: '', doctorFee: '', doctorAddressLine1: '', doctorQualification: '', doctorSpeciality: '', doctorAddressLine2: '', aboutDoctor: '', password: '', confirmPassword: '' })
+    const [data, setData] = useState({ profilepicture: '', doctorname: '', doctoremail: '', doctorexperience: '', doctorfee: '', doctoraddressline1: '', doctorqualification: '', doctorspeciality: '', doctoraddressline2: '', aboutdoctor: '', password: '', confirmpassword: '' })
 
     const { id } = useParams()
 
@@ -49,11 +49,11 @@ function EditDoctor() {
 
         e.preventDefault()
 
-        const { profilePicture, doctorName, doctorEmail, doctorExperience, doctorFee, doctorAddressLine1, doctorQualification, doctorSpeciality, doctorAddressLine2, aboutDoctor, password, confirmPassword } = data
+        const { profilepicture, doctorname, doctoremail, doctorexperience, doctorfee, doctoraddressline1, doctorqualification, doctorspeciality, doctorAddressLine2, aboutdoctor, password, confirmpassword } = data
 
         try {
 
-            const res = await axios.put("http://localhost:5000/updateDoctor", { id, profilePicture, doctorName, doctorEmail, doctorExperience, doctorFee, doctorAddressLine1, doctorQualification, doctorSpeciality, doctorAddressLine2, aboutDoctor, password, confirmPassword })
+            const res = await axios.put("http://localhost:5000/updateDoctor", { id, profilepicture, doctorname, doctoremail, doctorexperience, doctorfee, doctoraddressline1, doctorqualification, doctorspeciality, doctorAddressLine2, aboutdoctor, password, confirmpassword })
 
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -131,11 +131,11 @@ function EditDoctor() {
 
 
                                 <label>Enter doctor name</label>
-                                <input type="text" placeholder='Enter doctor name' value={data?.doctorName} onChange={(e) => setData({ ...data, doctorName: e.target.value })} />
+                                <input type="text" placeholder='Enter doctor name' value={data?.doctorname} onChange={(e) => setData({ ...data, doctorname: e.target.value })} />
                                 <label>Enter doctor email</label>
-                                <input type='email' placeholder='Enter doctor email' value={data?.doctorEmail} onChange={(e) => setData({ ...data, doctorEmail: e.target.value })} />
+                                <input type='email' placeholder='Enter doctor email' value={data?.doctoremail} onChange={(e) => setData({ ...data, doctoremail: e.target.value })} />
                                 <label>Experience</label>
-                                <select value={data.doctorExperience} onChange={(e) => setData({ ...data, doctorExperience: e.target.value })}>
+                                <select value={data.doctorexperience} onChange={(e) => setData({ ...data, doctorexperience: e.target.value })}>
                                     <option>1 Year</option>
                                     <option>2 Years</option>
                                     <option>3 Years</option>
@@ -144,10 +144,10 @@ function EditDoctor() {
                                 </select>
 
                                 <label>Enter doctor fee</label>
-                                <input type="number" placeholder='Enter doctor fee' value={data.doctorFee} onChange={(e) => setData({ ...data, doctorFee: e.target.value })} />
+                                <input type="number" placeholder='Enter doctor fee' value={data.doctorfee} onChange={(e) => setData({ ...data, doctorfee: e.target.value })} />
 
                                 <label>Enter doctor address line 1</label>
-                                <input type="text" placeholder='Enter address line 1' value={data.doctorAddressLine1} onChange={(e) => setData({ ...data, doctorAddressLine1: e.target.value })} />
+                                <input type="text" placeholder='Enter address line 1' value={data.doctoraddressline1} onChange={(e) => setData({ ...data, doctoraddressline1: e.target.value })} />
 
 
                             </div>
@@ -157,10 +157,10 @@ function EditDoctor() {
                                 <label>Enter password</label>
                                 <input type="password" placeholder='Enter password' onChange={(e) => setData({ ...data, password: e.target.value })} />
                                 <label>Confirm password</label>
-                                <input type="password" placeholder='Confirm password' onChange={(e) => setData({ ...data, confirmPassword: e.target.value })} />
+                                <input type="password" placeholder='Confirm password' onChange={(e) => setData({ ...data, confirmpassword: e.target.value })} />
 
                                 <label>Qualification</label>
-                                <select value={data.doctorQualification} onChange={(e) => setData({ ...data, doctorQualification: e.target.value })}>
+                                <select value={data.doctorqualification} onChange={(e) => setData({ ...data, doctorqualification: e.target.value })}>
 
                                     <option>MBBS (Bachelor of Medicine, Bachelor of Surgery)</option>
                                     <option>MD (Doctor of Medicine)</option>
@@ -169,7 +169,7 @@ function EditDoctor() {
                                 </select>
 
                                 <label>Speciality</label>
-                                <select value={data.doctorSpeciality} onChange={(e) => setData({ ...data, doctorSpeciality: e.target.value })}>
+                                <select value={data.doctorspeciality} onChange={(e) => setData({ ...data, doctorspeciality: e.target.value })}>
 
                                     <option>General Ophthalmology</option>
                                     <option>Comprehensive Eye Care</option>
@@ -179,7 +179,7 @@ function EditDoctor() {
                                 </select>
 
                                 <label>Enter doctor address line 2&nbsp;&nbsp;<span style={{ color: 'red' }}>optional</span></label>
-                                <input type="text" placeholder='Enter address line 2' value={data.doctorAddressLine2} onChange={(e) => setData({ ...data, doctorAddressLine2: e.target.value })} />
+                                <input type="text" placeholder='Enter address line 2' value={data.doctoraddressline2} onChange={(e) => setData({ ...data, doctoraddressline2: e.target.value })} />
 
                             </div>
 
@@ -188,7 +188,7 @@ function EditDoctor() {
 
 
                         <label className='about-doc'>About doctor</label>
-                        <textarea value={data.aboutDoctor} cols={10} rows={10} placeholder='Write about doctor' onChange={(e) => setData({ ...data, aboutDoctor: e.target.value })}></textarea>
+                        <textarea value={data.aboutdoctor} cols={10} rows={10} placeholder='Write about doctor' onChange={(e) => setData({ ...data, aboutdoctor: e.target.value })}></textarea>
 
                         <div className='button-add'>
 

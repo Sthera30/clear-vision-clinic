@@ -201,11 +201,11 @@ function Services() {
                 {service.map((serv, index) => (
 
                     <div className='service-box' key={index}>
-                        <img src={serv.profilePicture} alt="Patient ophthalmologist office" />
+                        <img src={serv.profilepicture} alt="Patient ophthalmologist office" />
                         <div className='content'>
 
-                            <h2>{serv.serviceHeading}</h2>
-                            <p>{serv.serviceDescription}</p>
+                            <h2>{serv.serviceheading}</h2>
+                            <p>{serv.servicedescription}</p>
 
                             <div className='button-learn'>
 

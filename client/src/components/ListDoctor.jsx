@@ -79,14 +79,14 @@ function ListDoctor() {
 
                     <div className='doc-box' key={index}>
 
-                        <img src={doc.profilePicture} alt="" />
+                        <img src={doc.profilepicture} alt="" />
 
                         <div className='content'>
 
-                            <h1>{doc.doctorName}
+                            <h1>{doc.doctorname}
                             </h1>
-                            <p>{doc.Qualification}</p>
-                            <p>{doc.aboutDoctor}</p>
+                            <p>{doc.qualification}</p>
+                            <p>{doc.aboutdoctor}</p>
 
 
                             <div className='button-container'>

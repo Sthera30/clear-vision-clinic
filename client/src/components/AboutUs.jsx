@@ -109,13 +109,13 @@ function AboutUs() {
 
           <div className='doc-box' key={index}>
 
-            <img src={doctor.profilePicture} alt="" />
+            <img src={doctor.profilepicture} alt="" />
 
             <div className='doc-content'>
 
-              <h2>{doctor.doctorName}</h2>
+              <h2>{doctor.doctorname}</h2>
               <p>
-                {doctor.aboutDoctor}
+                {doctor.aboutdoctor}
               </p>
 
               <div className='button-container'>

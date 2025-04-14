@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../css/EditAboutUs.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import imgAvator from '../../public/avator.png'
 import toast from 'react-hot-toast'
 import axios from 'axios'
@@ -10,16 +10,18 @@ function EditAboutUs() {
 
     const [image, setImage] = useState({})
     const [upload, setUploading] = useState(false)
-    const [data, setData] = useState({ profilePicture: '', aboutUsHeading: '', aboutUsDescription: '' })
+    const [data, setData] = useState({ profilepicture: '', aboutusheading: '', aboutusdescription: '' })
 
 
     const { id } = useParams()
+
+    const navigate = useNavigate()
 
 
     async function handle_about_use_by_id(id) {
 
         console.log(`Hello${id}`);
-        
+
 
         try {
             const res = await axios.get(`http://localhost:5000/getAboutUsById?id=${id}`)
@@ -70,14 +72,15 @@ function EditAboutUs() {
 
         e.preventDefault()
 
-        const { profilePicture, aboutUsHeading, aboutUsDescription } = data
+        const { profilepicture, aboutusheading, aboutusdescription } = data
 
         try {
 
-            const res = await axios.put("http://localhost:5000/updateAboutUs", { id, profilePicture, aboutUsHeading, aboutUsDescription })
+            const res = await axios.put("http://localhost:5000/updateAboutUs", { id, profilepicture, aboutusheading, aboutusdescription })
 
             if (res.data.success) {
                 toast.success(res.data.message)
+                navigate("/")
             }
 
             else {
@@ -96,7 +99,7 @@ function EditAboutUs() {
         handle_about_use_by_id(id)
         window.scrollTo(0, 0)
 
-    },[id])
+    }, [id])
 
     return (
         <div className='add-about-us-container'>
@@ -122,9 +125,9 @@ function EditAboutUs() {
                     </div>
 
                     <label>About Us Heading</label>
-                    <input type='text' placeholder='Enter about us heading...' value={data.aboutUsHeading} onChange={(e) => setData({ ...data, aboutUsHeading: e.target.value })} />
+                    <input type='text' placeholder='Enter about us heading...' value={data.aboutusheading} onChange={(e) => setData({ ...data, aboutusheading: e.target.value })} />
                     <label>About Us description</label>
-                    <textarea cols={10} rows={10} placeholder='Enter about us description...' value={data.aboutUsDescription} onChange={(e) => setData({ ...data, aboutUsDescription: e.target.value })}></textarea>
+                    <textarea cols={10} rows={10} placeholder='Enter about us description...' value={data.aboutusdescription} onChange={(e) => setData({ ...data, aboutusdescription: e.target.value })}></textarea>
                     <button type='submit'>Update about us</button>
 
                 </form>

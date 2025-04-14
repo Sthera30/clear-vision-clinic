@@ -24,15 +24,15 @@ function MyAppointments() {
 
         try {
 
-            if (!user?.fullName) return
+            if (!user?.fullname) return
 
-            const res = await axios.get(`http://localhost:5000/myAppointments?userName=${user.fullName}`)
+            const res = await axios.get(`http://localhost:5000/myAppointments?username=${user.fullname}`)
 
             if (res.data.success) {
                 setMyAppointments(res.data.data.appointments)
                 console.log(res.data.data.appointments);
 
-                handle_fetch_doc_profile(res.data.data.appointments[0].doctorName)
+                handle_fetch_doc_profile(res.data.data.appointments[0].doctorname)
             }
 
             else {
@@ -45,11 +45,11 @@ function MyAppointments() {
 
     }
 
-    async function handle_fetch_doc_profile(doctorName) {
+    async function handle_fetch_doc_profile(doctorname) {
 
         try {
 
-            const res = await axios.get(`http://localhost:5000/doctorProfilePic?doctorName=${doctorName}`)
+            const res = await axios.get(`http://localhost:5000/doctorProfilePic?doctorname=${doctorname}`)
 
             if (res.data.success) {
                 setDoctorProfile(res.data.data.doctor)
@@ -96,7 +96,7 @@ function MyAppointments() {
                         <div className='my-appointments-inner'>
 
                             <h1>Your Upcoming Appointment</h1>
-                            <p><MdCalendarMonth style={{ fontSize: '1.5rem' }} />&nbsp;{new Date(myAppointment.appointmentDate).toLocaleDateString('en-US', {
+                            <p><MdCalendarMonth style={{ fontSize: '1.5rem' }} />&nbsp;{new Date(myAppointment.appointmentdate).toLocaleDateString('en-US', {
                                 day: '2-digit',
                                 weekday: 'long',
                                 month: 'long',
@@ -105,18 +105,18 @@ function MyAppointments() {
 
                         </div>
 
-                        {myAppointment.Status === "Rejected" ?
+                        {myAppointment.status === "Rejected" ?
                             <div className='status-reject'>
 
-                                <h2>Status:&nbsp;{myAppointment.Status}</h2>
+                                <h2>Status:&nbsp;{myAppointment.status}</h2>
 
-                            </div> : myAppointment.Status === "Approved" ? <div className='status-check'>
+                            </div> : myAppointment.status === "Approved" ? <div className='status-check'>
 
-                                <h2>Status:&nbsp;{myAppointment.Status}</h2>
+                                <h2>Status:&nbsp;{myAppointment.status}</h2>
 
                             </div> : <div className='status-check'>
 
-                                <h2>Status:&nbsp;{myAppointment.Status}</h2>
+                                <h2>Status:&nbsp;{myAppointment.status}</h2>
 
                             </div>
 
@@ -133,14 +133,14 @@ function MyAppointments() {
                                     <>
                                         <div className='doc-left' key={index}>
 
-                                            <img src={doc.profilePicture} alt="" />
+                                            <img src={doc.profilepicture} alt="" />
 
                                         </div>
 
                                         <div className='doc-right'>
 
-                                            <h2>{doc.doctorName}</h2>
-                                            <p>{doc.doctorQualification}</p>
+                                            <h2>{doc.doctorname}</h2>
+                                            <p>{doc.doctorqualification}</p>
 
                                             <div className='button-co'>
 
@@ -171,7 +171,7 @@ function MyAppointments() {
 
                                         <h4>Reason For Visit</h4>
 
-                                        <p>{myAppointment.reasonForVisit}</p>
+                                        <p>{myAppointment.reasonforvisit}</p>
 
                                     </div>
 
@@ -191,7 +191,7 @@ function MyAppointments() {
                                         <div className='service-content' key={index}>
 
                                             <h4>Location</h4>
-                                            <p>{doc.doctorAddressLine1}</p>
+                                            <p>{doc.doctoraddressline1}</p>
 
                                         </div>
 
@@ -211,7 +211,7 @@ function MyAppointments() {
                                     <div className='service-content'>
 
                                         <h4>Appointment Date</h4>
-                                        <p>{new Date(myAppointment.appointmentDate).toLocaleDateString('en-US', {
+                                        <p>{new Date(myAppointment.appointmentdate).toLocaleDateString('en-US', {
                                             day: '2-digit',
                                             weekday: 'long',
                                             month: 'long',
@@ -234,7 +234,7 @@ function MyAppointments() {
                                     <div className='service-content'>
 
                                         <h4>Appointment Time</h4>
-                                        <p>{myAppointment.appointmentTime}</p>
+                                        <p>{myAppointment.appointmenttime}</p>
 
                                     </div>
 
@@ -252,13 +252,13 @@ function MyAppointments() {
                                     <div className='service-content'>
 
                                         <h4>Appointment Type</h4>
-                                        <p>{myAppointment.appointmentType}</p>
+                                        <p>{myAppointment.appointmenttype}</p>
 
                                     </div>
 
                                 </div>
 
-                                {myAppointment.Status === "Rejected" ? "" :
+                                {myAppointment.status === "Rejected" ? "" :
                                     <NavLink to={`/edit-appointment/${myAppointment.id}`} className='btnReschedule'>Reschedule Appointment</NavLink>
                                 }
 

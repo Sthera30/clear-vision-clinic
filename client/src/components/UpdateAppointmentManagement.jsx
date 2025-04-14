@@ -7,7 +7,7 @@ import { useUserContext } from '../context/userContext.jsx';
 
 function UpdateAppointmentManagement() {
 
-    const [data, setData] = useState({ Status: '' })
+    const [data, setData] = useState({ status: '' })
     const [appoint, setAppoint] = useState("")
 
     const { user } = useUserContext()
@@ -24,11 +24,11 @@ function UpdateAppointmentManagement() {
             console.log("User email is not available yet!");
         }
 
-        const { Status } = data
+        const { status } = data
 
         try {
 
-            const res = await axios.put(`http://localhost:5000/updateUserAppointment`, { id, Status, doctorName: appoint?.doctorName, appointmentDate: appoint?.appointmentDate, appointmentTime: appoint?.appointmentTime, appointmentType: appoint?.appointmentType, fullName: appoint?.userName, email: user?.email })
+            const res = await axios.put(`http://localhost:5000/updateUserAppointment`, { id, status, doctorname: appoint?.doctorname, appointmentdate: appoint?.appointmentdate, appointmenttime: appoint?.appointmenttime, appointmenttype: appoint?.appointmenttype, fullname: appoint?.username, email: user?.email })
 
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -93,7 +93,7 @@ function UpdateAppointmentManagement() {
 
                         <label>Appointment Status:</label>
 
-                        <select onChange={(e) => setData({ ...data, Status: e.target.value })}>
+                        <select onChange={(e) => setData({ ...data, status: e.target.value })}>
 
                             <option>Approved</option>
                             <option>Rejected</option>

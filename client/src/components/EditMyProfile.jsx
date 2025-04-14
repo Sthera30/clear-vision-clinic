@@ -7,7 +7,7 @@ import { useUserContext } from '../context/userContext.jsx'
 
 function EditMyProfile() {
 
-    const [data, setData] = useState({ fullName: '', lastName: '', email: '', telNo: '', addressLine1: '', addressLine2: '', gender: '', role: '', dob: '' })
+    const [data, setData] = useState({ fullname: '', lastname: '', email: '', telno: '', addressline1: '', addressline2: '', gender: '', role: '', dob: '' })
 
     const { id } = useParams()
 
@@ -39,11 +39,11 @@ function EditMyProfile() {
 
         e.preventDefault()
 
-        const { fullName, lastName, email, telNo, addressLine1, addressLine2, gender, role, dob } = data
+        const { fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob } = data
 
         try {
 
-            const res = await axios.put(`http://localhost:5000/updateUserProfile`, { id, fullName, lastName, email, telNo, addressLine1, addressLine2, gender, role, dob })
+            const res = await axios.put(`http://localhost:5000/updateUserProfile`, { id, fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob })
 
 
             if (res.data.success) {
@@ -52,12 +52,12 @@ function EditMyProfile() {
                 // Update user context so MyProfile gets updated immediately
                 setUser(prevUser => ({
                     ...prevUser,
-                    fullName,
-                    lastName,
+                    fullname,
+                    lastname,
                     email,
-                    telNo,
-                    addressLine1,
-                    addressLine2,
+                    telno,
+                    addressline1,
+                    addressline2,
                     gender,
                     role,
                     dob
@@ -104,22 +104,22 @@ function EditMyProfile() {
                         <h1>Update My Profile</h1>
 
                         <label>FullName</label>
-                        <input type='text' value={data.fullName} placeholder='Enter your full name' onChange={(e) => setData({ ...data, fullName: e.target.value })} />
+                        <input type='text' value={data.fullname} placeholder='Enter your full name' onChange={(e) => setData({ ...data, fullname: e.target.value })} />
 
                         <label>LastName</label>
-                        <input type='text' value={data.lastName} placeholder='Enter your last name' onChange={(e) => setData({ ...data, lastName: e.target.value })} />
+                        <input type='text' value={data.lastname} placeholder='Enter your last name' onChange={(e) => setData({ ...data, lastname: e.target.value })} />
 
                         <label>Email</label>
                         <input type='email' value={data.email} placeholder='Enter your email' onChange={(e) => setData({ ...data, email: e.target.value })} />
 
                         <label>telNo</label>
-                        <input type='text' value={data.telNo} placeholder='Enter your tel no' onChange={(e) => setData({ ...data, telNo: e.target.value })} />
+                        <input type='text' value={data.telno} placeholder='Enter your tel no' onChange={(e) => setData({ ...data, telno: e.target.value })} />
 
                         <label>AddressLine1</label>
-                        <input type='text' value={data.addressLine1} placeholder='Enter your address line 1' onChange={(e) => setData({ ...data, addressLine1: e.target.value })} />
+                        <input type='text' value={data.addressline1} placeholder='Enter your address line 1' onChange={(e) => setData({ ...data, addressline1: e.target.value })} />
 
                         <label>AddressLine2</label>
-                        <input type='text' value={data.addressLine2} placeholder='Enter your address line 2' onChange={(e) => setData({ ...data, addressLine2: e.target.value })} />
+                        <input type='text' value={data.addressline2} placeholder='Enter your address line 2' onChange={(e) => setData({ ...data, addressline2: e.target.value })} />
 
                         <label>Gender</label>
                         <input type='text' value={data.gender} placeholder='Enter your gender' onChange={(e) => setData({ ...data, gender: e.target.value })} />

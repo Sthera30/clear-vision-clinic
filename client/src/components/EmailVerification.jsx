@@ -40,7 +40,6 @@ function EmailVerification() {
             }
 
         } catch (error) {
-
             console.log(error);
         }
 
