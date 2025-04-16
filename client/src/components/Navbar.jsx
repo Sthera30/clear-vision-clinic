@@ -47,7 +47,6 @@ function Navbar() {
     };
 
 
-
     async function handle_logout() {
 
         try {
@@ -88,7 +87,7 @@ function Navbar() {
                 <div className={`right-design-inner ${isClicked ? "show" : "hide"}`}>
 
                     <NavLink to={"/"}>Home</NavLink>
-                    <NavLink style={{color: '#fff'}} to={"/about-us/"}>About us</NavLink>
+                    <NavLink style={{ color: '#fff' }} to={"/about-us/"}>About us</NavLink>
                     <NavLink to={"/our-services/"}>Services</NavLink>
                     <NavLink to={"/doctors/"}>Doctors</NavLink>
                     <NavLink to={"/contact-us/"}>Contact</NavLink>
