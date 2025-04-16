@@ -34,18 +34,16 @@ function Login() {
 
                 const res2 = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getUser`, { withCredentials: true })
 
-                console.log(res2.data);
 
 
                 if (res2.data.success) {
                     setUser(res2.data.data.user)
-                    console.log("Hello");
+                    navigate("/")
 
                 }
 
                 else {
                     setUser(null)
-                    console.log("Nope");
 
                 }
 
