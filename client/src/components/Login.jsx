@@ -36,11 +36,14 @@ function Login() {
 
                 if (data.success) {
                     setUser(data.data.user)
-                    navigate("/")
+                    console.log("Hello");
+                    
                 }
 
                 else {
                     setUser(null)
+                    console.log("Nope");
+                    
                 }
 
             }
