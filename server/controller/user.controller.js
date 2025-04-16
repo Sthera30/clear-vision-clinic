@@ -57,8 +57,8 @@ export const register = async (req, res) => {
         // Store the token in a cookie
         res.cookie('token', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",  // Use 'secure' in production
-            sameSite: process.env.NODE_ENV === "production" ? 'Strict' : 'Lax'
+            secure: true,  // Use 'secure' in production
+            sameSite: 'Strict'
         });
 
         return res.status(200).json({
@@ -136,8 +136,8 @@ export const loginUser = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: process.env.NODE_ENV === "production" ? 'Strict' : 'Lax'
+            secure: true,
+            sameSite: 'Strict'
         });
 
         return res.status(200).json({
@@ -154,8 +154,8 @@ export const logout = async (req, res) => {
     try {
         res.clearCookie('token', {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "none"
+            secure: true,
+            sameSite: "Strict"
         });
         return res.status(200).json({ message: 'logged out successfully', success: true });
     } catch (error) {
