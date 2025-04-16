@@ -26,7 +26,7 @@ function EditDoctor() {
 
         try {
 
-            const { data } = await axios.post("https://clear-vision-clinic-backend.vercel.app/upload", formData)
+            const { data } = await axios.post("http://localhost:5000/upload", formData)
 
             setUploading(false)
 
@@ -53,7 +53,7 @@ function EditDoctor() {
 
         try {
 
-            const res = await axios.put("https://clear-vision-clinic-backend.vercel.app/updateDoctor", { id, profilepicture, doctorname, doctoremail, doctorexperience, doctorfee, doctoraddressline1, doctorqualification, doctorspeciality, doctorAddressLine2, aboutdoctor, password, confirmpassword })
+            const res = await axios.put("http://localhost:5000/updateDoctor", { id, profilepicture, doctorname, doctoremail, doctorexperience, doctorfee, doctoraddressline1, doctorqualification, doctorspeciality, doctorAddressLine2, aboutdoctor, password, confirmpassword })
 
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -74,7 +74,7 @@ function EditDoctor() {
 
         try {
 
-            const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getDoctorById?id=${id}`)
+            const res = await axios.get(`http://localhost:5000/getDoctorById?id=${id}`)
 
             if (res.data.success) {
                 setData(res.data.data.doctor)

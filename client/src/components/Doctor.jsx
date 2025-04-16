@@ -16,7 +16,7 @@ function Doctor() {
 
         try {
 
-            const res = await axios.get("https://clear-vision-clinic-backend.vercel.app/getAllDoctor")
+            const res = await axios.get("http://localhost:5000/getAllDoctor")
 
             if (res.data.success) {
                 setDoctor(res.data.data.doctors)

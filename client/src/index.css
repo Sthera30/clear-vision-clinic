@@ -117,13 +117,22 @@ html {
     width: 60%;
   }
 
-  .email-verification-container .email-verification-inner form{
+  .email-verification-container .email-verification-inner form {
     width: 50%;
-}
+  }
 
-.change-password-container .change-password-inner form{
-  margin-top: 10rem;
-}
+  .change-password-container .change-password-inner form {
+    margin-top: 10rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .admin-functionality {
+    width: 25%;
+  }
+
 
 }
 
@@ -212,10 +221,10 @@ html {
 }
 
 @media (max-width: 879px) {
-  
-  .change-password-container .change-password-inner form{
+
+  .change-password-container .change-password-inner form {
     width: 70%;
-}
+  }
 
 }
 
@@ -308,6 +317,14 @@ html {
 
 }
 
+@media (max-width: 761px) {
+
+  .admin-functionality {
+    width: 35%;
+  }
+
+}
+
 
 @media (max-width: 760px) {
 
@@ -387,11 +404,11 @@ html {
 }
 
 @media (max-width: 609px) {
-  
-  .email-verification-container .email-verification-inner form{
+
+  .email-verification-container .email-verification-inner form {
     width: 70%;
-}
-  
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -428,6 +445,19 @@ html {
 
 }
 
+
+@media (max-width: 575px) {
+
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-subtitle {
+    line-height: 1.5;
+  }
+
+}
+
 @media (max-width: 550px) {
 
   .admin-box {
@@ -438,10 +468,10 @@ html {
 
 
 @media (max-width: 549px) {
-  
-  .change-password-container .change-password-inner form{
+
+  .change-password-container .change-password-inner form {
     width: 90%;
-}
+  }
 
 }
 
@@ -478,7 +508,13 @@ html {
     width: 100%;
   }
 
+  .admin-functionality {
+    width: 48%;
+  }
+
+
 }
+
 
 @media (max-width: 517px) {
 
@@ -572,6 +608,32 @@ html {
     width: 90%;
   }
 
+  .hero-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    line-height: 1.5;
+    font-size: 1.1rem !important;
+  }
+
+
+  .doc-container .doc-box:nth-child(1) .doc-content {
+    height: 26rem !important;
+
+  }
+
+
+  .doc-container .doc-box:nth-child(2) .doc-content {
+    height: 28rem !important;
+
+  }
+
+  .doc-container .doc-box:nth-child(3) .doc-content {
+    height: 23rem !important;
+
+  }
+
 }
 
 @media (max-width:439px) {
@@ -619,15 +681,15 @@ html {
     font-size: 1.2rem;
   }
 
-  
-  .email-verification-container .email-verification-inner form{
+
+  .email-verification-container .email-verification-inner form {
     width: 90%;
-}
+  }
 
 
-.change-password-container .change-password-inner form{
-  margin-top: 15rem;
-}
+  .change-password-container .change-password-inner form {
+    margin-top: 15rem;
+  }
 
 }
 
@@ -644,6 +706,16 @@ html {
   .login-inner-container form {
     width: 90%;
   }
+
+}
+
+@media (max-width: 420px) {
+
+  .admin-functionality {
+    width: 60%;
+    right: 8rem;
+  }
+
 
 }
 
@@ -678,6 +750,12 @@ html {
     width: 92%;
   }
 
+  .clients-container {
+    background: hsl(197, 87%, 50%);
+    height: 60rem;
+    margin: 3rem 0rem;
+  }
+
 }
 
 @media (max-width: 399px) {
@@ -688,10 +766,27 @@ html {
 
 }
 
+@media (max-width: 398px) {
+
+  .featureIte {
+    font-size: .8rem !important;
+  }
+
+}
+
 @media (max-width: 390px) {
 
   .left-content h1 {
     font-size: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-subtitle {
+    line-height: 1.5;
+    font-size: 1rem !important;
   }
 
 }
@@ -701,6 +796,10 @@ html {
 
   .doctor-availability-container .doctor-availability-inner h1 {
     font-size: 2rem;
+  }
+
+  .frame-container .frame-inner-container h1 {
+    font-size: 1.5rem !important;
   }
 
 }
@@ -744,6 +843,14 @@ html {
 
 }
 
+@media (max-width: 352px) {
+
+  .clients-container h1 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem !important;
+  }
+
+}
 
 @media (max-width: 350px) {
 
@@ -757,10 +864,190 @@ html {
 
 }
 
+@media (max-width: 345px) {
+
+  .about-us-heading h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .about-us-heading h2 {
+    font-size: 2rem;
+  }
+
+  .about-us-left h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.5;
+  }
+
+}
+
+@media (max-width: 343px) {
+
+  .appointment-burner {
+    height: 32rem;
+  }
+
+  .appointment-burner .appointment-inner-burner h1 {
+    font-size: 2rem !important;
+  }
+
+}
+
+@media (max-width: 340px) {
+
+  .doc-container .doc-box:nth-child(1) .content {
+    height: 29rem !important;
+  }
+
+  .doc-container .doc-box:nth-child(2) .content {
+    height: 29rem !important;
+  }
+
+}
+
+@media (max-width: 335px) {
+
+  .hero-con {
+    padding: 2rem 2%;
+  }
+
+  .featureIte {
+    font-size: .7rem !important;
+  }
+
+
+  .doc-container .doc-box:nth-child(1) .doc-content {
+    height: 28rem !important;
+
+  }
+
+
+  .doc-container .doc-box:nth-child(2) .doc-content {
+    height: 30rem !important;
+
+  }
+
+  .doc-container .doc-box:nth-child(3) .doc-content {
+    height: 23rem !important;
+
+  }
+
+}
+
+@media (max-width: 333px) {
+
+  .appointment-burner .appointment-inner-burner h1 {
+    font-size: 1.8rem !important;
+  }
+
+}
+
 @media (max-width: 330px) {
 
   .serive-heading h1 {
     font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 329px) {
+
+  .hero-content h1 {
+    font-size: 1.7rem !important;
+  }
+
+}
+
+@media (max-width: 328px) {
+
+  .calendarSection_ {
+    width: 100% !important;
+  }
+
+}
+
+
+@media (max-width: 319px) {
+
+  .logo-design span {
+    font-size: 1.2rem;
+  }
+
+  .eyeIcon {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width: 314px) {
+
+  .service-heading h1 {
+    font-size: 2.1rem;
+  }
+
+}
+
+@media (max-width: 312px) {
+
+  .hero-content h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .doctor-availability-inner h1{
+    font-size: 1.8rem !important;
+  }
+
+}
+
+@media (max-width: 309px) {
+
+  .appointment-burner .appointment-inner-burner h1 {
+    font-size: 1.7rem !important;
+  }
+
+}
+
+@media (max-width: 303px) {
+
+  .my-appointments-inner h1 {
+    font-size: 1.5rem !important;
+  }
+
+}
+
+@media (max-width: 299px) {
+
+  .doc-container .doc-box:nth-child(1) .content {
+    height: 32rem !important;
+  }
+
+  .doc-container .doc-box:nth-child(2) .content {
+    height: 32rem !important;
+  }
+
+  .admin-functionality {
+    right: 1rem;
+    width: 68%;
+  }
+
+}
+
+@media (max-width: 295px) {
+
+  .appointment-burner .appointment-inner-burner h1 {
+    font-size: 1.5rem !important;
+  }
+
+}
+
+@media (max-width: 282px) {
+
+  .logo-design span {
+    font-size: 1rem;
+  }
+
+  .eyeIcon {
+    font-size: 1rem;
   }
 
 }

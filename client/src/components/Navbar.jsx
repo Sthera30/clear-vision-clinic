@@ -52,7 +52,7 @@ function Navbar() {
 
         try {
 
-            const res = await axios.post("https://clear-vision-clinic-backend.vercel.app/logout", {}, { withCredentials: true })
+            const res = await axios.post("http://localhost:5000/logout", {}, { withCredentials: true })
 
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -78,7 +78,7 @@ function Navbar() {
 
             <div className='logo-design'>
 
-                <FaEye style={{ color: '#fff', fontSize: '2.5rem', fontFamily: 'cursive', fontStyle: 'oblique' }} />
+                <FaEye className='eyeIcon' style={{ color: '#fff', fontSize: '2.5rem', fontFamily: 'cursive', fontStyle: 'oblique' }} />
                 <span>Clear Vision Clinic</span>
 
             </div>

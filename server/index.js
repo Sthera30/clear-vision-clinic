@@ -21,11 +21,12 @@ app.use(cookieParser())
 
 
 app.use(cors({
-    origin: 'https://clear-vision-clinic-frontend.vercel.app',
+    origin: 'http://localhost:5173',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
 
+//https://clear-vision-clinic-frontend.vercel.app
 
 //handles file uploads, documents etc
 app.post("/upload", ExpressFormidable({ maxFieldsSize: 5 * 2024 * 2024 }), uploadImage)

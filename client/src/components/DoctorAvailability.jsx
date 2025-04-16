@@ -15,7 +15,7 @@ function DoctorAvailability() {
     // Fetch all doctors
     async function handle_fetch_doctor() {
         try {
-            const res = await axios.get("https://clear-vision-clinic-backend.vercel.app/getAllDoctor");
+            const res = await axios.get("http://localhost:5000/getAllDoctor");
             if (res.data.success) {
                 setDoctor(res.data.data.doctors);
                 // Set initial doctor if available
@@ -65,7 +65,7 @@ function DoctorAvailability() {
                 }
             }
     
-            const response = await axios.post("https://clear-vision-clinic-backend.vercel.app/addDoctorAvailability", {
+            const response = await axios.post("http://localhost:5000/addDoctorAvailability", {
                 entries: availabilityEntries
             });
     
@@ -273,11 +273,11 @@ function DoctorAvailability() {
         },
         calendarSection: {
             flex: '1',
-            minWidth: '280px'
+            width: '100%'
         },
         timeSection: {
             flex: '1',
-            minWidth: '280px',
+            minWidth: '228px',
             display: 'flex',
             flexDirection: 'column'
         },
@@ -485,7 +485,7 @@ function DoctorAvailability() {
 
                         <div style={styles.flexRow}>
                             {/* Calendar Section */}
-                            <div style={styles.calendarSection}>
+                            <div className='calendarSection_' style={styles.calendarSection}>
                                 <label style={styles.label}>Select Dates</label>
 
                                 <div style={styles.calendarContainer}>

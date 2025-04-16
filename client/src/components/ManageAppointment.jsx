@@ -22,7 +22,7 @@ function ManageAppointment() {
         const fetchUsers = async () => {
             try {
                 const response = await axios.get(
-                    `https://clear-vision-clinic-backend.vercel.app/usersSearch?search=${searchTerm}`
+                    `http://localhost:5000/usersSearch?search=${searchTerm}`
                 );
                 setAppointments(response.data);
             } catch (error) {

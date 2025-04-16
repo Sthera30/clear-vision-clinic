@@ -26,7 +26,7 @@ function EmailVerification() {
 
         try {
 
-            const res = await axios.post(`https://clear-vision-clinic-backend.vercel.app/verifyEmail`, { email })
+            const res = await axios.post(`http://localhost:5000/verifyEmail`, { email })
 
             if (res.data.success) {
                 toast.success(res.data.message)

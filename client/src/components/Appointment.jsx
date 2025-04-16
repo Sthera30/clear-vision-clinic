@@ -30,7 +30,7 @@ function Appointmenr() {
 
     try {
 
-      const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getDoctorById?id=${id}`)
+      const res = await axios.get(`http://localhost:5000/getDoctorById?id=${id}`)
 
       if (res.data.success) {
         setData(res.data.data.doctor)
@@ -53,7 +53,7 @@ function Appointmenr() {
 
     try {
 
-      const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getDoctorAvailabilityByName?doctorname=${doctorname}`)
+      const res = await axios.get(`http://localhost:5000/getDoctorAvailabilityByName?doctorname=${doctorname}`)
 
       if (res.data.success) {
         setDoc(res.data.data.doctorAvailability);
@@ -74,7 +74,7 @@ function Appointmenr() {
 
     try {
 
-      const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getDocAvailabilityTimeByDocName?doctorname=${doctorname}`)
+      const res = await axios.get(`http://localhost:5000/getDocAvailabilityTimeByDocName?doctorname=${doctorname}`)
 
       if (res.data.success) {
         setDocTimeSlot(res.data.data.docTimeSlot)
@@ -100,7 +100,7 @@ function Appointmenr() {
 
     try {
 
-      const res = await axios.post('https://clear-vision-clinic-backend.vercel.app/addAppointment', { doctorname: data?.doctorname, username: user?.fullname, email: user?.email, appointmentdate, appointmenttime, appointmenttype, reasonforvisit })
+      const res = await axios.post('http://localhost:5000/addAppointment', { doctorname: data?.doctorname, username: user?.fullname, email: user?.email, appointmentdate, appointmenttime, appointmenttype, reasonforvisit })
 
       if (res.data.success) {
         toast.success(res.data.message)

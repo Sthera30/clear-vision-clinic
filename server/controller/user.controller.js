@@ -717,6 +717,7 @@ export const addAppointment = async (req, res) => {
 
 export const getAppointmentByUser = async (req, res) => {
     const { username } = req.query;
+    
 
     try {
         const query = 'SELECT * FROM appointment WHERE username = $1';
@@ -724,7 +725,7 @@ export const getAppointmentByUser = async (req, res) => {
 
         return res.status(200).json({
             message: '', success: true, data: {
-                appointments: rows[0]
+                appointments: rows
             }
         })
 
@@ -738,8 +739,8 @@ export const getDocProfilePic = async (req, res) => {
     const { doctorname } = req.query;
 
     try {
-        const getDocProfile_sql = "SELECT * FROM doctor WHERE \"doctorName\" = $1";
-        const { rows } = await db.query(getDocProfile_sql, [doctorname]);
+        const getDocProfile_sql = "SELECT * FROM doctor WHERE \"doctorname\" = $1";
+        const { rows } = await pool.query(getDocProfile_sql, [doctorname]);
 
         if (rows.length === 0) {
             return res.status(200).json({ error: 'No information found!', success: false });

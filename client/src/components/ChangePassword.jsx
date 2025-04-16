@@ -18,7 +18,7 @@ function ChangePassword() {
 
         try {
 
-            const res = await axios.put(`https://clear-vision-clinic-backend.vercel.app/changePassword`, { password, confirmpassword, email: localStorage.getItem("email") })
+            const res = await axios.put(`http://localhost:5000/changePassword`, { password, confirmpassword, email: localStorage.getItem("email") })
 
             if (res.data.success) {
                 toast.success(res.data.message)

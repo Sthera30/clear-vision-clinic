@@ -22,7 +22,7 @@ function Login() {
 
         try {
             //SEND COOKIES
-            const res = await axios.post("https://clear-vision-clinic-backend.vercel.app/login", { email, password }, { withCredentials: true })
+            const res = await axios.post("http://localhost:5000/login", { email, password }, { withCredentials: true })
 
             if (res.data.error) {
                 toast.error(res.data.error)
@@ -32,7 +32,7 @@ function Login() {
 
                 toast.success(res.data.message)
 
-                const { data } = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getUser`, { withCredentials: true })
+                const { data } = await axios.get(`http://localhost:5000/getUser`, { withCredentials: true })
 
                 if (data.success) {
                     setUser(data.data.user)

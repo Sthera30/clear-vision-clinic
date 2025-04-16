@@ -26,11 +26,11 @@ function MyAppointments() {
 
             if (!user?.fullname) return
 
-            const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/myAppointments?username=${user.fullname}`)
+            const res = await axios.get(`http://localhost:5000/myAppointments?username=${user.fullname}`)
 
             if (res.data.success) {
                 setMyAppointments(res.data.data.appointments)
-                console.log(res.data.data.appointments);
+                console.log(res.data.data.appointments[0]);
 
                 handle_fetch_doc_profile(res.data.data.appointments[0].doctorname)
             }
@@ -49,7 +49,7 @@ function MyAppointments() {
 
         try {
 
-            const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/doctorProfilePic?doctorname=${doctorname}`)
+            const res = await axios.get(`http://localhost:5000/doctorProfilePic?doctorname=${doctorname}`)
 
             if (res.data.success) {
                 setDoctorProfile(res.data.data.doctor)

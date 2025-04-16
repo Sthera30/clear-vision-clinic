@@ -28,7 +28,7 @@ function UpdateAppointmentManagement() {
 
         try {
 
-            const res = await axios.put(`https://clear-vision-clinic-backend.vercel.app/updateUserAppointment`, { id, status, doctorname: appoint?.doctorname, appointmentdate: appoint?.appointmentdate, appointmenttime: appoint?.appointmenttime, appointmenttype: appoint?.appointmenttype, fullname: appoint?.username, email: user?.email })
+            const res = await axios.put(`http://localhost:5000/updateUserAppointment`, { id, status, doctorname: appoint?.doctorname, appointmentdate: appoint?.appointmentdate, appointmenttime: appoint?.appointmenttime, appointmenttype: appoint?.appointmenttype, fullname: appoint?.username, email: user?.email })
 
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -49,7 +49,7 @@ function UpdateAppointmentManagement() {
 
         try {
 
-            const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getAppointmentById?id=${id}`)
+            const res = await axios.get(`http://localhost:5000/getAppointmentById?id=${id}`)
 
             if (res.data.success) {
                 setAppoint(res.data.data.appointment)
