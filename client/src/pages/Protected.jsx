@@ -14,7 +14,7 @@ function Protected({ children }) {
 
         try {
 
-            const res = await axios.get("http://localhost:5000/getUser", { withCredentials: true })
+            const res = await axios.get("https://clear-vision-clinic-backend.vercel.app/getUser", { withCredentials: true })
 
             if (res.data.success) {
                 setUser(res.data.data.user)

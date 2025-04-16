@@ -15,7 +15,7 @@ export function UserContextProvider({ children }) {
 
       try {
 
-        const res = await axios("http://localhost:5000/getUser", { withCredentials: true }) // Passing cookies
+        const res = await axios("https://clear-vision-clinic-backend.vercel.app/getUser", { withCredentials: true }) // Passing cookies
 
         if (res.data.success) {
           setUser(res.data.data.user)

@@ -21,7 +21,7 @@ function AddAboutUs() {
 
         try {
 
-            const { data } = await axios.post("http://localhost:5000/upload", formData)
+            const { data } = await axios.post("https://clear-vision-clinic-backend.vercel.app/upload", formData)
 
             setUploading(false)
 
@@ -48,7 +48,7 @@ function AddAboutUs() {
 
         try {
 
-            const res = await axios.post("http://localhost:5000/addAboutUs", { profilePicture, aboutUsHeading, aboutUsDescription })
+            const res = await axios.post("https://clear-vision-clinic-backend.vercel.app/addAboutUs", { profilePicture, aboutUsHeading, aboutUsDescription })
 
             if (res.data.success) {
                 toast.success(res.data.message)

@@ -18,7 +18,7 @@ function Admin() {
 
         try {
 
-            const res = await axios.get("http://localhost:5000/getAllDoctor")
+            const res = await axios.get("https://clear-vision-clinic-backend.vercel.app/getAllDoctor")
 
             if (res.data.success) {
                 setDoctor(res.data.data.doctors)
@@ -39,7 +39,7 @@ function Admin() {
 
         try {
 
-            const res = await axios.get("http://localhost:5000/getAllAppointments")
+            const res = await axios.get("https://clear-vision-clinic-backend.vercel.app/getAllAppointments")
 
             if (res.data.success) {
                 setAppoint(res.data.data.appointment)
@@ -60,7 +60,7 @@ function Admin() {
 
         try {
 
-            const res = await axios.get("http://localhost:5000/getAllUsers")
+            const res = await axios.get("https://clear-vision-clinic-backend.vercel.app/getAllUsers")
 
             if (res.data.success) {
                 setUser(res.data.data.users)

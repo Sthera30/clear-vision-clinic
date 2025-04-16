@@ -19,7 +19,7 @@ function EditMyProfile() {
 
         try {
 
-            const res = await axios.get(`http://localhost:5000/getUserInfoById?id=${id}`)
+            const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getUserInfoById?id=${id}`)
 
             if (res.data.success) {
                 setData(res.data.data.userInfo)
@@ -43,7 +43,7 @@ function EditMyProfile() {
 
         try {
 
-            const res = await axios.put(`http://localhost:5000/updateUserProfile`, { id, fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob })
+            const res = await axios.put(`https://clear-vision-clinic-backend.vercel.app/updateUserProfile`, { id, fullname, lastname, email, telno, addressline1, addressline2, gender, role, dob })
 
 
             if (res.data.success) {
