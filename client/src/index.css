@@ -48,10 +48,10 @@ html {
 
   }
 
-  .doc-container .doc-box .content {
+  /*.doc-container .doc-box:nth-child() .content {
     height: 33rem;
   }
-
+*/
 
   .doc-container .doc-box .doc-content .button-container .btnAppointment {
     font-size: .7rem !important;
@@ -488,7 +488,7 @@ html {
 @media (max-width: 536px) {
 
   .doc-box .content {
-    height: 25rem !important;
+    height: 32rem !important;
   }
 
 }
@@ -896,11 +896,11 @@ html {
 @media (max-width: 340px) {
 
   .doc-container .doc-box:nth-child(1) .content {
-    height: 29rem !important;
+    height: 34rem !important;
   }
 
   .doc-container .doc-box:nth-child(2) .content {
-    height: 29rem !important;
+    height: 34rem !important;
   }
 
 }
@@ -1018,11 +1018,11 @@ html {
 @media (max-width: 299px) {
 
   .doc-container .doc-box:nth-child(1) .content {
-    height: 32rem !important;
+    height: 38rem !important;
   }
 
   .doc-container .doc-box:nth-child(2) .content {
-    height: 32rem !important;
+    height: 38rem !important;
   }
 
   .admin-functionality {
