@@ -824,6 +824,12 @@ html {
     width: 94%;
   }
 
+  
+  .clients-container h1 {
+    font-size: 1.8rem;
+    padding-bottom: 1.5rem !important;
+  }
+
 }
 
 @media (max-width: 363px) {
