@@ -32,10 +32,10 @@ function Login() {
 
                 toast.success(res.data.message)
 
-                const { data } = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getUser`, { withCredentials: true })
+                const res = await axios.get(`https://clear-vision-clinic-backend.vercel.app/getUser`, { withCredentials: true })
 
                 if (data.success) {
-                    setUser(data.data.user)
+                    setUser(res.data.data.user)
                     console.log("Hello");
                     
                 }
