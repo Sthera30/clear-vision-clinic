@@ -75,26 +75,14 @@ export const register = async (req, res) => {
 
 export const authUser = async (req, res) => {
     try {
-        const checkEmail = async () => {
-            // Query to check if the user exists
-            const checkSql = "SELECT * FROM users WHERE email = $1"; // Use $1 for PostgreSQL parameterized queries
-            const values = [req.user.email];
+        const checkSql = "SELECT * FROM users WHERE email = $1";
+        const { rows } = await pool.query(checkSql, [req.user.email]);
 
-            try {
-                const { rows } = await pool.query(checkSql, values);  // Use pool.query() for PostgreSQL
-                return rows;  // Return the rows (equivalent to MySQL result)
-            } catch (err) {
-                throw err;  // Catch any errors during the query execution
-            }
-        };
-
-        const results = await checkEmail();
-
-        if (results.length === 0) {
+        if (rows.length === 0) {
             return res.status(200).json({ error: 'User not found!', success: false });
         }
 
-        const user = results[0];  // The first user in the results array
+        const user = rows[0];
 
         return res.status(200).json({
             message: 'User Found!',
@@ -105,8 +93,8 @@ export const authUser = async (req, res) => {
         });
 
     } catch (error) {
-        console.log(error);
-        return res.status(500).json({ error: 'Failed Authenticating User!', success: false }); // 500 for server errors
+        console.error("Error authenticating user:", error);
+        return res.status(200).json({ error: 'Failed Authenticating User!', success: false });
     }
 };
 
@@ -717,7 +705,7 @@ export const addAppointment = async (req, res) => {
 
 export const getAppointmentByUser = async (req, res) => {
     const { username } = req.query;
-    
+
 
     try {
         const query = 'SELECT * FROM appointment WHERE username = $1';
