@@ -51,7 +51,7 @@ function Footer() {
 
                 </div>
 
-                <p>© 2025 Clear Vision Clinic. All rights reserved. | Website Built By Sthe Digital Agency</p>
+                <p>© 2025 Clear Vision Clinic. All rights reserved. | Website Built By <a href="https://www.sthedigitalagency.co.za" target='_blank' rel='noopener noreferrer'>Sthe Digital Agency</a></p>
 
             </div>
 
